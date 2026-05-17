@@ -1,0 +1,145 @@
+/* === Navbar Overrides === */
+body > header > nav {
+  background: #1b1b1b !important;
+  box-shadow: none !important;
+  border: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+}
+
+body > header > nav.navbar--sticky {
+  background: #1b1b1b !important;
+  box-shadow: none !important;
+}
+
+body > header > nav,
+body > header > nav h1,
+body > header > nav h1 a,
+body > header > nav a,
+body > header > nav .button--big,
+body > header > nav .icon-button {
+  color: #e5e5e5 !important;
+}
+
+body > header > nav .button--big {
+  text-transform: uppercase;
+  letter-spacing: 0.02857em;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+/* Drawer overlay also pure black */
+#navbar-drawer {
+  background: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* === Timeline Icon Circles === */
+.timeline-element-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.timeline-element-icon svg {
+  position: static;
+  margin: 0;
+  left: auto;
+  top: auto;
+}
+
+/* Ensure icon circles are visible even without SVG content */
+.timeline-element-icon::after {
+  content: "";
+  display: block;
+}
+
+/* === Footer Links === */
+footer a {
+  color: #00acff !important;
+}
+
+/* === Language Switcher === */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 599px) {
+  .nav-right .button--big {
+    display: none;
+  }
+}
+
+.lang-switcher {
+  position: relative;
+  margin-right: 8px;
+}
+
+.lang-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  color: #e5e5e5;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  font-family: inherit;
+  transition: opacity 200ms;
+}
+
+.lang-btn:hover {
+  opacity: 0.7;
+}
+
+.lang-btn svg {
+  opacity: 0.7;
+}
+
+.lang-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #2a2a2a;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  z-index: 1200;
+  min-width: 140px;
+}
+
+.lang-dropdown.open {
+  display: block;
+}
+
+.lang-option {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  background: none;
+  border: none;
+  color: #e5e5e5;
+  font-size: 0.875rem;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: left;
+  transition: background 150ms;
+}
+
+.lang-option:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* === Fix Tooltip Max Width === */
+.tooltip {
+  max-inline-size: max-content !important;
+}

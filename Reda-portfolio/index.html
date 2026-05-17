@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Nunito&display=swap" rel="stylesheet" crossorigin="anonymous" />
+<link rel="stylesheet" href="/src/common.css" />
+<link rel="stylesheet" href="/src/homepage.css" />
+<link rel="stylesheet" href="/src/overrides.css" />
+<link rel="icon" href="/assets/profile.jpg" type="image/jpeg" />
+<title>Home | Mohamed Reda Qiyaoui</title>
+</head>
+<body>
+<header>
+<nav>
+  <div>
+    <button id="drawer-open" class="icon-button" aria-label="Open Navigation Drawer">
+      <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+    </button>
+    <h1><a href="#top">Mohamed Reda Qiyaoui</a></h1>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switcher" id="lang-switcher">
+      <button class="lang-btn" id="lang-btn" aria-label="Switch language">
+        <span id="lang-flag">🇬🇧</span>
+        <span id="lang-code">EN</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-option" data-lang="en">🇬🇧 English</button>
+        <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+        <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+      </div>
+    </div>
+    <a class="button--big" href="#top" data-i18n="nav.home">Home</a>
+    <a class="button--big" href="#skills" data-i18n="nav.skills">Skills</a>
+    <a class="button--big" href="#portfolio" data-i18n="nav.projects">Projects</a>
+    <a class="button--big" href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+</nav>
+<dialog id="navbar-drawer">
+  <button id="drawer-close" class="icon-button" aria-label="Close Navigation Drawer">
+    <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M18.3 5.71a.9959.9959 0 0 0-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 0 0-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path></svg>
+  </button>
+  <div class="navbar-drawer-links">
+    <a class="button--big" href="#top" data-i18n="nav.home">Home</a>
+    <a class="button--big" href="#skills" data-i18n="nav.skills">Skills</a>
+    <a class="button--big" href="#portfolio" data-i18n="nav.projects">Projects</a>
+    <a class="button--big" href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+</dialog>
+<div id="navbar-trigger" style="position: absolute; width: 1px; height: 1px; top: 100px; left: 0;"></div>
+</header>
+<main id="top">
+<div id="tsparticles" style="position: fixed; inset: 0; z-index: -10;"></div>
+<div class="splash">
+  <img class="profile-picture" src="/assets/profile.jpg" alt="Profile image of Mohamed Reda Qiyaoui" />
+  <h1>Mohamed Reda Qiyaoui</h1>
+  <h2 data-i18n="hero.subtitle">Cybersecurity Student &amp; Pentesting Enthusiast</h2>
+  <div class="socials">
+    <div class="has-tooltip">
+      <a href="https://www.linkedin.com/in/mohamed-reda-qiyaoui/" target="_blank" rel="noopener">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+      </a>
+      <span class="tooltip" tip-position="bottom">LinkedIn</span>
+    </div>
+    <div class="has-tooltip">
+      <a href="https://github.com/Medreda-q" target="_blank" rel="noopener">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+      </a>
+      <span class="tooltip" tip-position="bottom">Medreda-q</span>
+    </div>
+    <div class="has-tooltip">
+      <a href="mailto:mohamedreda.qiyaoui@etu.uae.ac.ma">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Email</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+      </a>
+      <span class="tooltip" tip-position="bottom">mohamedreda.qiyaoui@etu.uae.ac.ma</span>
+    </div>
+    <div class="has-tooltip">
+      <a href="https://discord.com/users/808273510082281493" target="_blank" rel="noopener">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+      </a>
+      <span class="tooltip" tip-position="bottom">Medreda-q</span>
+    </div>
+  </div>
+</div>
+
+<div class="section" id="about-me">
+  <div class="container">
+    <p><strong data-i18n="about.greeting">Hey!</strong></p>
+    <p data-i18n-html="about.bio">I'm Mohamed Reda Qiyaoui from Morocco!<br />I'm a cybersecurity and information systems audit student at EST Tétouan. Passionate about penetration testing, network security and intrusion detection.<br />Feel free to get in touch or take a look at my work below.</p>
+  </div>
+</div>
+
+<div class="section-title" id="portfolio">
+  <h2 data-i18n="portfolio.title">Portfolio</h2>
+</div>
+
+<div class="section">
+  <div class="container">
+    <h3 data-i18n="portfolio.topProjects">My top projects</h3>
+    <div class="top-projects">
+      <div class="card" style="background-color: #1976d2; color: #fff;">
+        <div class="card-content">
+          <svg viewBox="0 0 24 24" fill="white" style="width:80px;height:80px;margin:0 auto 10px auto;display:block;"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+          <h4>SNORT IDS/IPS</h4>
+          <div><p data-i18n="project.snort">Network Intrusion Detection and Prevention</p></div>
+        </div>
+        <div class="card-actions">
+          <a class="button" href="./Snort_Files.zip" download="Snort_Files.zip" style="color: #fff;" data-i18n="portfolio.download">DOWNLOAD PRESENTATION</a>
+        </div>
+      </div>
+      <div class="card" style="background-color: #e53935; color: #fff;">
+        <div class="card-content">
+          <svg viewBox="0 0 24 24" fill="white" style="width:80px;height:80px;margin:0 auto 10px auto;display:block;"><path d="M14.4 6L14 4H5v17h2v-7h5.6l.4 2h7V6z"/></svg>
+          <h4>CTF Writeups</h4>
+          <div><p data-i18n="project.ctf">Collection of Capture The Flag challenge solutions</p></div>
+        </div>
+        <div class="card-actions">
+          <a class="button" href="https://github.com/Medreda-q" target="_blank" rel="noopener" style="color: #fff;" data-i18n="portfolio.visit">VISIT WEBSITE</a>
+        </div>
+      </div>
+      <div class="card" style="background-color: #283593; color: #fff;">
+        <div class="card-content">
+          <svg viewBox="0 0 24 24" fill="white" style="width:80px;height:80px;margin:0 auto 10px auto;display:block;"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z"/></svg>
+          <h4 data-i18n="project.portfolioTitle">Portfolio Website</h4>
+          <div><p data-i18n="project.portfolio">This portfolio built with a futuristic aesthetic</p></div>
+        </div>
+        <div class="card-actions">
+          <a class="button" href="https://github.com/Medreda-q" target="_blank" rel="noopener" style="color: #fff;" data-i18n="portfolio.visit">VISIT WEBSITE</a>
+        </div>
+      </div>
+    </div>
+
+    <h3 data-i18n="timeline.title">Timeline</h3>
+    <div class="timeline">
+        <div class="timeline-element">
+          <span class="timeline-element-icon" style="background-color: #007a99; color: #fff;">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" style="width: 28px; height: 28px; display: block;"><path d="M15.022 1.341C15.022 1.341 12.37.161 10.158.455C7.946.749 6.767 1.927 6.767 1.927C6.767 1.927 9.124 1.191 10.597 1.338C12.07 1.485 15.022 1.341 15.022 1.341ZM14.922 4.195C14.922 4.195 12.27 3.015 10.058 3.309C7.846 3.603 6.667 4.781 6.667 4.781C6.667 4.781 9.024 4.045 10.497 4.192C11.97 4.339 14.922 4.195 14.922 4.195ZM15.422 6.849C15.422 6.849 12.77 5.669 10.558 5.963C8.346 6.257 7.167 7.435 7.167 7.435C7.167 7.435 9.524 6.699 10.997 6.846C12.47 6.993 15.422 6.849 15.422 6.849ZM17.165 17.585C17.165 17.585 16.723 18.174 15.692 18.616C14.661 19.058 12.451 19.205 12.451 19.205C12.451 19.205 10.389 19.352 8.769 19.058C7.149 18.764 6.707 18.322 6.707 18.322C6.707 18.322 7.296 18.911 8.916 19.353C10.536 19.795 12.598 19.795 12.598 19.795C12.598 19.795 14.808 19.648 16.134 19.059C17.46 18.47 17.165 17.585 17.165 17.585ZM19.227 15.228C19.227 15.228 19.079 16.112 18.196 16.996C17.313 17.88 15.251 18.322 15.251 18.322C15.251 18.322 13.042 18.616 10.538 18.616C8.034 18.616 6.119 18.027 6.119 18.027C6.119 18.027 4.793 16.996 4.793 15.965C4.793 14.934 6.119 14.198 6.119 14.198C6.119 14.198 4.351 15.229 4.351 16.407C4.351 17.585 6.119 18.911 6.119 18.911C6.119 18.911 8.329 19.5 10.833 19.5C13.337 19.5 15.694 19.205 15.694 19.205C15.694 19.205 17.904 18.911 19.082 17.586C20.26 16.26 19.227 15.228 19.227 15.228ZM16.429 8.749C16.429 8.749 16.429 11.253 15.545 13.021C14.661 14.789 12.304 15.673 12.304 15.673C12.304 15.673 10.684 15.967 8.916 15.673C7.148 15.379 6.264 14.348 6.264 14.348C6.264 14.348 5.675 14.937 6.706 15.821C7.737 16.705 9.505 16.999 9.505 16.999C9.505 16.999 11.862 16.999 13.924 15.821C15.986 14.643 17.017 12.433 17.017 10.223C17.017 8.013 16.429 8.749 16.429 8.749ZM23.35 12.579C23.35 12.579 23.35 14.199 22.025 15.083C20.7 15.967 19.079 16.114 19.079 16.114C19.079 16.114 20.405 15.82 21.289 15.084C22.173 14.348 22.467 13.317 22.467 13.317C22.467 13.317 22.467 12.286 21.289 11.402C20.111 10.518 18.049 10.224 18.049 10.224C18.049 10.224 19.817 10.371 21.289 11.107C22.762 11.843 23.35 12.579 23.35 12.579ZM24 12.579C24 12.579 24 15.083 22.086 16.556C20.172 18.029 17.668 17.587 17.668 17.587C17.668 17.587 19.73 17.587 21.35 16.556C22.97 15.525 23.117 13.905 23.117 13.905C23.117 13.905 23.264 11.843 21.496 10.518C19.728 9.193 17.224 8.751 17.224 8.751C17.224 8.751 20.022 8.751 21.789 10.224C23.557 11.697 24 12.579 24 12.579Z" /></svg>
+          </span>
+          <div class="timeline-element-content">
+            <h4 data-i18n="timeline.dutTitle">Cybersécurité et audit des systèmes d'information</h4>
+            <h5 data-i18n-html="timeline.dutSubtitle"><a href="https://est.uae.ma/" target="_blank" rel="noopener" style="color: #0077b5;">École Supérieure de Technologie de Tétouan</a></h5>
+            <div>
+              <p data-i18n="timeline.dutDesc">I started my university journey at EST Tétouan, pursuing a DUT in Cybersecurity and Information Systems Audit. Passionate about ethical hacking, network security and penetration testing.</p>
+            </div>
+            <span class="timeline-element-date" data-i18n="timeline.dutDate">October 2025</span>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+<footer id="contact">
+  <div class="container">
+    <div class="footer-sections">
+      <div class="footer-section">
+        <h2 data-i18n="footer.contactTitle">Contact me</h2>
+        <ul>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span style="color: #ffffff;">LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/mohamed-reda-qiyaoui/" target="_blank" rel="noopener" style="color: #0077b5;">Mohamed Reda Qiyaoui</a>
+          </li>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span style="color: #ffffff;">GitHub:</span>
+            <a href="https://github.com/Medreda-q" target="_blank" rel="noopener">Medreda-q</a>
+          </li>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>Email</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            <span style="color: #ffffff;">Email:</span>
+            <a href="mailto:mohamedreda.qiyaoui@etu.uae.ac.ma">mohamedreda.qiyaoui@etu.uae.ac.ma</a>
+          </li>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+            <span style="color: #ffffff;">Discord:</span>
+            <a href="https://discord.com/users/808273510082281493" target="_blank" rel="noopener">Medreda-q</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 data-i18n="footer.sitemapTitle">Site map</h2>
+        <ul>
+          <li><a href="#top" data-i18n="nav.home">Home</a></li>
+          <li><a href="#skills" data-i18n="nav.skills">Skills</a></li>
+          <li><a href="#portfolio" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <span class="copyright-text" data-i18n="footer.copyright">&copy; 2026 Mohamed Reda Qiyaoui</span>
+    </div>
+  </div>
+</footer>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
