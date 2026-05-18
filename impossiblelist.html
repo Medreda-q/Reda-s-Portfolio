@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="HandheldFriendly" content="True" />
+<meta name="mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="description" content="My Impossible List: an ever evolving list of things to achieve" />
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500|Nunito&display=swap" rel="stylesheet" crossorigin="anonymous" />
+<link rel="stylesheet" href="/src/common.css" />
+<link rel="stylesheet" href="/src/homepage.css" />
+<link rel="stylesheet" href="/src/overrides.css" />
+<link rel="icon" href="/assets/profile.jpg" type="image/jpeg" />
+<title>Impossible List | Mohamed Reda Qiyaoui</title>
+<style>
+  /* ===== Impossible List specific styles (matching diogotc.com exactly) ===== */
+
+  /* Override body background for this page — keep dark */
+  body {
+    background-color: #121212;
+  }
+
+  /* Splash — full viewport height, centered */
+  .il-splash {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .il-splash h1 {
+    font-family: "Nunito", "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 4rem;
+    font-weight: 300;
+    margin-top: 30px;
+    margin-bottom: 0;
+    letter-spacing: -0.01em;
+  }
+
+  .il-splash h2 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top: 0;
+    opacity: 0.75;
+  }
+
+  /* Section card — white card on dark bg */
+  .il-section {
+    background: #fff;
+    color: rgba(0, 0, 0, 0.8);
+    padding-top: 24px;
+    padding-bottom: 48px;
+    box-shadow: 0px 2px 4px -1px rgba(0,0,0,0.2),
+                0px 4px 5px 0px rgba(0,0,0,0.14),
+                0px 1px 10px 0px rgba(0,0,0,0.12);
+    margin-bottom: 0;
+  }
+
+
+  /* Intro text */
+  .il-intro {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(0,0,0,0.75);
+    margin-bottom: 2rem;
+  }
+
+  /* Category headings */
+  .il-section h2 {
+    margin: 1em 0 0.3em 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.334;
+    letter-spacing: 0em;
+    color: rgba(0,0,0,0.87);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+
+  /* Lists */
+  .il-section ul {
+    padding-left: 1.5em;
+    margin: 0.5em 0 0 0;
+  }
+
+  .il-section li {
+    font-size: 0.875rem;
+    line-height: 1.43;
+    letter-spacing: 0.01071em;
+    margin-bottom: 0.725rem;
+    color: rgba(0,0,0,0.87);
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  }
+
+  /* Sub-items (future milestones) */
+  .il-section li > ul {
+    margin-top: 0.3rem;
+  }
+
+  .il-section li > ul > li {
+    margin-bottom: 0.3rem;
+    list-style-type: disc;
+    color: rgba(0,0,0,0.6);
+    font-size: 0.8rem;
+  }
+
+  /* Completed items — strikethrough + date */
+  .il-done {
+    text-decoration: line-through;
+    color: rgba(0,0,0,0.45) !important;
+  }
+
+  .il-date {
+    font-style: italic;
+    font-size: 0.78rem;
+    color: rgba(0,0,0,0.45);
+    margin-left: 0.4em;
+    text-decoration: none;
+    display: inline;
+  }
+
+  /* Pending items */
+  .il-pending {
+    color: rgba(0,0,0,0.87);
+  }
+</style>
+</head>
+<body>
+<header>
+<nav>
+  <div>
+    <button id="drawer-open" class="icon-button" aria-label="Open Navigation Drawer">
+      <svg focusable="false" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path></svg>
+    </button>
+    <h1><a href="./index.html">Mohamed Reda Qiyaoui</a></h1>
+  </div>
+  <div class="nav-right">
+    <div class="lang-switcher" id="lang-switcher">
+      <button class="lang-btn" id="lang-btn" aria-label="Switch language">
+        <span id="lang-flag">🇬🇧</span>
+        <span id="lang-code">EN</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-option" data-lang="en">🇬🇧 English</button>
+        <button class="lang-option" data-lang="fr">🇫🇷 Français</button>
+        <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+      </div>
+    </div>
+    <a class="button--big" href="./index.html" data-i18n="nav.home">Home</a>
+    <a class="button--big" href="#" data-i18n="nav.impossibleList">Impossible List</a>
+    <a class="button--big" href="./index.html#portfolio" data-i18n="nav.projects">Projects</a>
+    <a class="button--big" href="#" data-i18n="nav.cv">CV</a>
+    <a class="button--big" href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+</nav>
+<dialog id="navbar-drawer">
+  <button id="drawer-close" class="icon-button" aria-label="Close Navigation Drawer">
+    <svg aria-hidden="true" viewBox="0 0 24 24" focusable="false"><path d="M18.3 5.71a.9959.9959 0 0 0-1.41 0L12 10.59 7.11 5.7a.9959.9959 0 0 0-1.41 0c-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z"></path></svg>
+  </button>
+  <div class="navbar-drawer-links">
+    <a class="button--big" href="./index.html" data-i18n="nav.home">Home</a>
+    <a class="button--big" href="#" data-i18n="nav.impossibleList">Impossible List</a>
+    <a class="button--big" href="./index.html#portfolio" data-i18n="nav.projects">Projects</a>
+    <a class="button--big" href="#" data-i18n="nav.cv">CV</a>
+    <a class="button--big" href="#contact" data-i18n="nav.contact">Contact</a>
+  </div>
+</dialog>
+<div id="navbar-trigger" style="position: absolute; width: 1px; height: 1px; top: 100px; left: 0;"></div>
+</header>
+
+<main id="top">
+<div id="tsparticles" style="position: fixed; inset: 0; z-index: -10;"></div>
+
+<!-- SPLASH -->
+<div class="il-splash">
+  <h1 data-i18n="impossible.title">The Impossible List</h1>
+  <h2 data-i18n="impossible.by">by Mohamed Reda Qiyaoui</h2>
+</div>
+
+<!-- WHITE CARD SECTION -->
+<div class="il-section">
+  <div class="container">
+
+    <p style="font-size:0.875rem;line-height:1.6;color:rgba(0,0,0,0.8);margin-bottom:1em;">
+      You might be wondering what an impossible list is and why it is here. In contrast with a bucket list, an impossible list is ever evolving and is expected to grow with time: you might cross things off the list, but you are also <strong>always adding new items</strong> to the list. It is, therefore, <em>impossible</em> to finish every single item in the list, hence the name.
+    </p>
+    <p style="font-size:0.875rem;line-height:1.6;color:rgba(0,0,0,0.8);margin-bottom:2rem;">
+      I'm keeping my list public to encourage myself to update it and to get other people to start their very own lists as well.
+    </p>
+
+    <!-- Cybersecurity & Pentesting -->
+    <h2 data-i18n="impossible.cyber">Cybersecurity &amp; Pentesting Goals</h2>
+    <ul>
+      <li class="il-pending" data-i18n="impossible.cyber.1">Obtain OSCP certification</li>
+      <li class="il-pending" data-i18n="impossible.cyber.4">Obtain CISSP ISC2 certification</li>
+      <li class="il-pending" data-i18n="impossible.cyber.2">Find and publish a CVE</li>
+      <li class="il-pending" data-i18n="impossible.cyber.3">Reach top 100 in a major CTF platform</li>
+    </ul>
+
+    <!-- Technology Goals -->
+    <h2 data-i18n="impossible.tech">Technology Goals</h2>
+    <ul>
+      <li class="il-pending" data-i18n="impossible.tech.1">Install Arch Linux</li>
+      <li class="il-pending" data-i18n="impossible.tech.2">Code a mobile app with React Native</li>
+    </ul>
+
+    <!-- Academic & Career -->
+    <h2 data-i18n="impossible.academic">Academic &amp; Career Goals</h2>
+    <ul>
+      <li class="il-pending" data-i18n="impossible.academic.1">Graduate from EST Tétouan</li>
+      <li class="il-pending" data-i18n="impossible.academic.2">Land a Junior Pentester role</li>
+    </ul>
+
+    <!-- Gaming -->
+    <h2 data-i18n="impossible.gaming">Gaming Goals</h2>
+    <ul>
+      <li class="il-pending" data-i18n="impossible.gaming.1">Reach 2000 in chess.com</li>
+    </ul>
+
+    <!-- Traveling -->
+    <h2 data-i18n="impossible.travel">Traveling</h2>
+    <ul>
+      <li class="il-pending" data-i18n="impossible.travel.1">Visit Paris, France</li>
+      <li class="il-pending" data-i18n="impossible.travel.2">Visit Amsterdam, Netherlands</li>
+      <li class="il-pending" data-i18n="impossible.travel.5">Visit Saint Petersburg, Russia</li>
+      <li class="il-pending" data-i18n="impossible.travel.6">Visit Moscow, Russia</li>
+      <li class="il-pending" data-i18n="impossible.travel.3">Visit London, England</li>
+      <li class="il-pending" data-i18n="impossible.travel.7">Visit New York City, USA</li>
+      <li class="il-pending" data-i18n="impossible.travel.8">Visit Los Angeles, USA</li>
+      <li class="il-pending" data-i18n="impossible.travel.9">Visit Stockholm, Sweden</li>
+      <li class="il-pending" data-i18n="impossible.travel.10">Obtain dual citizenship with another country</li>
+      <li class="il-pending" data-i18n="impossible.travel.4">See the Northern Lights</li>
+    </ul>
+
+    <!-- Life goals & Misc -->
+    <h2 data-i18n="impossible.life">Life goals &amp; Misc</h2>
+    <ul>
+      <li class="il-pending" data-i18n="impossible.life.1">Own a house</li>
+      <li class="il-pending" data-i18n="impossible.life.2">Own a car</li>
+      <li class="il-pending" data-i18n="impossible.life.3">Get something named after me</li>
+      <li class="il-pending" data-i18n="impossible.life.4">Have a positive impact in the world</li>
+      <li class="il-pending" data-i18n="impossible.life.5">Start a blog</li>
+    </ul>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer id="contact">
+  <div class="container">
+    <div class="footer-sections">
+      <div class="footer-section">
+        <h2 data-i18n="footer.contactTitle">Contact me</h2>
+        <ul>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            <span style="color: #ffffff;">LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/mohamed-reda-qiyaoui/" target="_blank" rel="noopener" style="color: #0077b5;">Mohamed Reda Qiyaoui</a>
+          </li>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>GitHub</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+            <span style="color: #ffffff;">GitHub:</span>
+            <a href="https://github.com/Medreda-q" target="_blank" rel="noopener">Medreda-q</a>
+          </li>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>Email</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+            <span style="color: #ffffff;">Email:</span>
+            <a href="mailto:mohamedreda.qiyaoui@etu.uae.ac.ma">mohamedreda.qiyaoui@etu.uae.ac.ma</a>
+          </li>
+          <li>
+            <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="16" height="16" style="vertical-align:middle; margin-right:6px; fill:white;"><title>Discord</title><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"/></svg>
+            <span style="color: #ffffff;">Discord:</span>
+            <a href="https://discord.com/users/808273510082281493" target="_blank" rel="noopener">Medreda-q</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h2 data-i18n="footer.sitemapTitle">Site map</h2>
+        <ul>
+          <li><a href="./index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="#" data-i18n="nav.impossibleList">Impossible List</a></li>
+          <li><a href="./index.html#portfolio" data-i18n="nav.projects">Projects</a></li>
+          <li><a href="#" data-i18n="nav.cv">CV</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <div class="container">
+      <span class="copyright-text" data-i18n="footer.copyright">© 2026 Mohamed Reda Qiyaoui</span>
+    </div>
+  </div>
+</footer>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

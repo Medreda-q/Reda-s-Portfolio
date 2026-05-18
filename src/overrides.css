@@ -26,6 +26,8 @@ body > header > nav .button--big {
   letter-spacing: 0.02857em;
   font-weight: 500;
   font-size: 0.875rem;
+  min-width: unset;
+  text-align: center;
 }
 
 /* Drawer overlay also pure black */
@@ -36,12 +38,23 @@ body > header > nav .button--big {
 
 /* === Timeline Icon Circles === */
 .timeline-element-icon {
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  font-size: 1rem;
-  color: #fff;
+  position: absolute;
+  top: 0;
+  left: -5px !important;
+  box-shadow: 0px 3px 1px -2px rgba(0,0,0,.2), 0px 2px 2px 0px rgba(0,0,0,.14), 0px 1px 5px 0px rgba(0,0,0,.12);
+}
+
+@media only screen and (min-width: 1170px) {
+  .timeline-element-icon {
+    left: 50% !important;
+    margin-left: -25px !important;
+  }
 }
 
 .timeline-element-icon svg {
@@ -49,12 +62,8 @@ body > header > nav .button--big {
   margin: 0;
   left: auto;
   top: auto;
-}
-
-/* Ensure icon circles are visible even without SVG content */
-.timeline-element-icon::after {
-  content: "";
-  display: block;
+  width: 24px !important;
+  height: 24px !important;
 }
 
 /* === Footer Links === */
@@ -143,3 +152,17 @@ footer a {
 .tooltip {
   max-inline-size: max-content !important;
 }
+
+/* === Impossible List === */
+.impossible-list {
+  list-style-type: square;
+  padding-left: 20px;
+  margin-bottom: 2.5rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+.impossible-list li {
+  margin-bottom: 0.8rem;
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
