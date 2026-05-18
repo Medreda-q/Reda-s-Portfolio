@@ -166,3 +166,21 @@ footer a {
   line-height: 1.5;
 }
 
+/* === Splash Responsive Fixes === */
+.splash {
+  padding-top: 80px; /* Safe padding to clear fixed navbar on all screens */
+  padding-bottom: 40px;
+}
+
+@media (max-width: 599px) {
+  .splash h1 {
+    font-size: 2.5rem !important; /* Smaller size so words don't wrap excessively */
+    margin-top: 20px !important;
+  }
+  .splash .profile-picture {
+    width: 90px !important;
+    height: 90px !important;
+  }
+}
+
+
