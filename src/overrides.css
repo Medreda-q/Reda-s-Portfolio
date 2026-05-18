@@ -178,27 +178,13 @@ footer li {
 }
 
 @media (max-width: 599px) {
-  .splash {
-    justify-content: flex-start !important; /* Spaced from the top instead of strictly centered */
-    padding-top: 120px !important; /* Beautiful consistent space below the navbar */
-  }
   .splash h1 {
     font-size: 2.5rem !important; /* Smaller size so words don't wrap excessively */
-    line-height: 1.1 !important; /* Decreases vertical space between Mohamed, Reda, and Qiyaoui */
     margin-top: 20px !important;
-    margin-bottom: 8px !important;
   }
   .splash .profile-picture {
-    width: 95px !important;
-    height: 95px !important;
-  }
-  .splash h2 {
-    font-size: 1.15rem !important; /* Slightly smaller subtitle so it fits perfectly on mobile */
-    margin-top: 8px !important;
-    line-height: 1.4 !important;
-  }
-  .splash .socials {
-    margin-top: 20px !important; /* Pulls social icons closer to reduce height */
+    width: 90px !important;
+    height: 90px !important;
   }
 }
 
