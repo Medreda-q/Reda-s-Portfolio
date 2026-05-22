@@ -10,6 +10,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         impossiblelist: resolve(__dirname, 'impossiblelist.html'),
+        cv: resolve(__dirname, 'cv.html'),
       },
     },
   },
