@@ -5,12 +5,91 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CV | Mohamed Reda Qiyaoui</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    html, body { height: 100%; }
-    iframe { width: 100%; height: 100vh; border: none; display: block; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      overflow: hidden;
+      background: #1b1b1b;
+      color: #e5e5e5;
+    }
+
+    /* ── iframe wrapper ── */
+    .cv-frame-wrap {
+      position: fixed;
+      inset: 0;
+      opacity: 0;
+      transition: opacity 400ms ease;
+    }
+    .cv-frame-wrap.loaded { opacity: 1; }
+
+    #cv-iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+    }
+
+    /* ── Loading overlay ── */
+    .cv-loader {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: #1b1b1b;
+      transition: opacity 300ms ease;
+    }
+    .cv-loader.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .cv-loader__spinner {
+      width: 40px;
+      height: 40px;
+      border: 3px solid rgba(255,255,255,.1);
+      border-top-color: #037daf;
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+    }
+    .cv-loader__text {
+      font-size: .85rem;
+      color: rgba(229,229,229,.5);
+      letter-spacing: .04em;
+      font-family: sans-serif;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
   </style>
 </head>
 <body>
-  <iframe src="https://reda-s-cv.vercel.app/" title="CV"></iframe>
+
+  <!-- CV iframe wrapper -->
+  <div class="cv-frame-wrap" id="cv-frame-wrap">
+    <div class="cv-loader" id="cv-loader">
+      <div class="cv-loader__spinner"></div>
+      <span class="cv-loader__text">Loading CV…</span>
+    </div>
+    <iframe
+      id="cv-iframe"
+      src="https://reda-s-cv.vercel.app/"
+      title="CV"
+      loading="eager"
+      allowfullscreen
+    ></iframe>
+  </div>
+
+  <script>
+    const iframe = document.getElementById('cv-iframe');
+    const wrap   = document.getElementById('cv-frame-wrap');
+    const loader = document.getElementById('cv-loader');
+
+    iframe.addEventListener('load', () => {
+      loader.classList.add('hidden');
+      wrap.classList.add('loaded');
+    });
+  </script>
 </body>
 </html>
