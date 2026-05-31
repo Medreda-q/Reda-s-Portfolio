@@ -157,7 +157,7 @@ const translations = {
     "timeline.title": "Trayectoria",
     "timeline.dutTitle": "Ciberseguridad y auditoría de sistemas de información",
     "timeline.dutSubtitle": "<a href=\"https://est.uae.ma/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0077b5;\">Escuela Superior de Tecnología de Tetuán</a>",
-    "timeline.dutDesc": "Comencé mi viaje universitario en EST Tetuán, cursando un DUT en Ciberseguridad y Auditoría de Sistemas de Información. Apasionado por el hacking ético, la seguridad de redes y las pruebas de penetración.",
+    "timeline.dutDesc": "Comenzé mi viaje universitario en EST Tetuán, cursando un DUT en Ciberseguridad y Auditoría de Sistemas de Información. Apasionado por el hacking ético, la seguridad de redes y las pruebas de penetración.",
     "timeline.dutDate": "Octubre 2025",
     "footer.contactTitle": "Contáctame",
     "footer.sitemapTitle": "Mapa del sitio",
@@ -338,6 +338,32 @@ const drawer = document.getElementById("navbar-drawer");
 if (drawerOpen && drawerClose && drawer) {
   drawerOpen.addEventListener("click", () => drawer.showModal());
   drawerClose.addEventListener("click", () => drawer.close());
+}
+
+// ===========================
+// Navbar Scroll Sticky Logic
+// ===========================
+const navbar = document.querySelector("body > header > nav");
+const trigger = document.getElementById("navbar-trigger");
+
+if (navbar && trigger) {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          navbar.classList.remove("navbar--sticky");
+        } else {
+          navbar.classList.add("navbar--sticky");
+        }
+      });
+    },
+    {
+      rootMargin: "0px 0px 0px 0px",
+      threshold: 0,
+    }
+  );
+
+  observer.observe(trigger);
 }
 
 // ===========================
