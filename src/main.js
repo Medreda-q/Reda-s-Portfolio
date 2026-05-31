@@ -157,7 +157,7 @@ const translations = {
     "timeline.title": "Trayectoria",
     "timeline.dutTitle": "Ciberseguridad y auditoría de sistemas de información",
     "timeline.dutSubtitle": "<a href=\"https://est.uae.ma/\" target=\"_blank\" rel=\"noopener\" style=\"color: #0077b5;\">Escuela Superior de Tecnología de Tetuán</a>",
-    "timeline.dutDesc": "Comenzé mi viaje universitario en EST Tetuán, cursando un DUT en Ciberseguridad y Auditoría de Sistemas de Información. Apasionado por el hacking ético, la seguridad de redes y las pruebas de penetración.",
+    "timeline.dutDesc": "Comencé mi viaje universitario en EST Tetuán, cursando un DUT en Ciberseguridad y Auditoría de Sistemas de Información. Apasionado por el hacking ético, la seguridad de redes y las pruebas de penetración.",
     "timeline.dutDate": "Octubre 2025",
     "footer.contactTitle": "Contáctame",
     "footer.sitemapTitle": "Mapa del sitio",
@@ -233,8 +233,10 @@ function setLanguage(lang) {
   // Update the switcher button display
   const flagEl = document.getElementById("lang-flag");
   const codeEl = document.getElementById("lang-code");
-  if (flagEl && codeEl && langMeta[lang]) {
+  if (flagEl && langMeta[lang]) {
     flagEl.textContent = langMeta[lang].flag;
+  }
+  if (codeEl && langMeta[lang]) {
     codeEl.textContent = langMeta[lang].code;
   }
 
