@@ -1,6 +1,7 @@
 <div align="center">
 
-#  Mohamed Reda Qiyaoui — Portfolio Website 🌌
+#  **Mohamed Reda Qiyaoui — Portfolio Website** 🌌
+
 <img width="1883" height="879" alt="image" src="https://github.com/user-attachments/assets/9ff6dc15-e20a-49dd-bf13-1891cb4038c6" />
 
 **Personal cybersecurity portfolio with a dark constellation aesthetic**
