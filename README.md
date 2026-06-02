@@ -59,14 +59,21 @@ The design follows a **dark constellation aesthetic**: deep dark backgrounds, st
 
 ---
 
-##  License
+## 📜 License
 
-This project is open source. Feel free to use it as inspiration for your own portfolio — just don't copy the content directly.
+This repository is **source-available** for educational and inspiration purposes only.
+
+- ✅ You may view and study the code
+- ✅ You may use it as inspiration for your own portfolio
+- ❌ You may **not** copy, redistribute, or repurpose the code as-is
+- ❌ You may **not** use my name, photo, content, or personal information in any form
+
+All content (text, images, project descriptions) is © 2026 Mohamed Reda Qiyaoui. All rights reserved.
 
 ---
 
 <div align="center">
 
-Made with ☕ and a lot of terminal sessions — Tétouan, Morocco 🇲🇦
+Made with ☕ and a lot of terminal sessions — by Reeeeda.
 
 </div>
