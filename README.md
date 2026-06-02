@@ -1,6 +1,6 @@
 <div align="center">
 
-#  Portfolio Website
+# Reda's Personal Portfolio Website
 
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/39b6ec1e-0dd2-44de-a990-cad418f9dc88" />
 
