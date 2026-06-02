@@ -1,15 +1,12 @@
 <div align="center">
 
-# 🌌 Mohamed Reda Qiyaoui — Portfolio Website
+#  Mohamed Reda Qiyaoui — Portfolio Website 🌌
 <img width="1883" height="879" alt="image" src="https://github.com/user-attachments/assets/9ff6dc15-e20a-49dd-bf13-1891cb4038c6" />
 
 **Personal cybersecurity portfolio with a dark constellation aesthetic**
 
-[![Live Site](https://img.shields.io/badge/Live%20Site-mohamedreda.is--a.dev-0a0a0a?style=for-the-badge&logo=vercel&logoColor=white)](https://mohamedreda.is-a.dev)
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
-[![Multilingual](https://img.shields.io/badge/Languages-EN%20%7C%20FR%20%7C%20ES-blueviolet?style=for-the-badge)](https://mohamedreda.is-a.dev)
+[![Portfolio](https://img.shields.io/badge/Portfolio-mohamedreda.is--a.dev-blue?style=flat&logo=vercel)](https://mohamedreda.is-a.dev)
+[![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20FR%20%7C%20ES-blueviolet?style=flat)](https://mohamedreda.is-a.dev)
 
 </div>
 
@@ -21,23 +18,25 @@ This is the source code for my personal portfolio website — a fully static, mu
 
 The design follows a **dark constellation aesthetic**: deep dark backgrounds, star-like particles, and subtle glow effects that create a futuristic atmosphere suited to a cybersecurity profile.
 
-> 🔗 **Live:** [mohamedreda.is-a.dev](https://mohamedreda.is-a.dev)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
 
-## ✨ Features
+## Features
 
-- 🌍 **Multilingual** — Full support for English, French, and Spanish with a language switcher
-- 🕐 **Timeline section** — Academic and professional journey narrated chronologically
-- 🔐 **Projects showcase** — SOC deployment, Snort IDS/IPS, Web CV, and more
-- 📋 **Impossible List** — A living page of personal and professional goals
-- 📄 **CV page** — Trilingual online CV (separate repo: [reda-s-CV](https://github.com/Medreda-q/reda-s-CV))
-- 📱 **Responsive** — Mobile-friendly layout
-- 📬 **Contact section** — LinkedIn, GitHub, Email, Discord
+-  **Multilingual** — Full support for English, French, and Spanish with a language switcher
+-  **Timeline section** — Academic and professional journey narrated chronologically
+-  **Projects showcase** — SOC deployment, Snort IDS/IPS, Web CV, and more
+-  **Impossible List** — A living page of personal and professional goals
+-  **CV page** — Trilingual online CV (separate repo: [reda-s-CV](https://github.com/Medreda-q/reda-s-CV))
+-  **Responsive** — Mobile-friendly layout
+-  **Contact section** — LinkedIn, GitHub, Email, Discord
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
@@ -50,7 +49,7 @@ The design follows a **dark constellation aesthetic**: deep dark backgrounds, st
 
 ---
 
-## 📌 Pages
+##  Pages
 
 | Page | URL | Description |
 |------|-----|-------------|
@@ -60,7 +59,7 @@ The design follows a **dark constellation aesthetic**: deep dark backgrounds, st
 
 ---
 
-## 📜 License
+##  License
 
 This project is open source. Feel free to use it as inspiration for your own portfolio — just don't copy the content directly.
 
