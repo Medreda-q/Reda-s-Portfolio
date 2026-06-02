@@ -1,6 +1,7 @@
 <div align="center">
 
 # 🌌 Mohamed Reda Qiyaoui — Portfolio Website
+<img width="1883" height="879" alt="image" src="https://github.com/user-attachments/assets/9ff6dc15-e20a-49dd-bf13-1891cb4038c6" />
 
 **Personal cybersecurity portfolio with a dark constellation aesthetic**
 
@@ -31,27 +32,8 @@ The design follows a **dark constellation aesthetic**: deep dark backgrounds, st
 - 🔐 **Projects showcase** — SOC deployment, Snort IDS/IPS, Web CV, and more
 - 📋 **Impossible List** — A living page of personal and professional goals
 - 📄 **CV page** — Trilingual online CV (separate repo: [reda-s-CV](https://github.com/Medreda-q/reda-s-CV))
-- 🔑 **PGP Public Key** — Available for download directly from the site
 - 📱 **Responsive** — Mobile-friendly layout
 - 📬 **Contact section** — LinkedIn, GitHub, Email, Discord
-
----
-
-## 🗂️ Project Structure
-
-```
-Reda-s-Portfolio/
-├── index.html              # Main homepage (EN/FR/ES)
-├── impossiblelist.html     # Impossible List page
-├── assets/
-│   ├── profile.jpg         # Profile photo
-│   ├── est_logo-*.png      # EST Tétouan university logo
-│   └── ...                 # Other assets
-├── public_key.asc          # PGP public key
-├── Snort_Files.zip         # Snort project presentation download
-├── Wazuh_Simulation.zip    # SOC simulation presentation download
-└── CV/                     # CV subpage
-```
 
 ---
 
@@ -68,33 +50,6 @@ Reda-s-Portfolio/
 
 ---
 
-## 🚀 Running Locally
-
-No build tools or dependencies required — this is a fully static site.
-
-```bash
-# Clone the repository
-git clone https://github.com/Medreda-q/Reda-s-Portfolio.git
-
-# Navigate into the folder
-cd Reda-s-Portfolio
-
-# Open in your browser
-open index.html
-# or just double-click index.html
-```
-
-For a better local dev experience with live reload:
-
-```bash
-# Using Python (no install needed)
-python3 -m http.server 8080
-
-# Then open http://localhost:8080
-```
-
----
-
 ## 📌 Pages
 
 | Page | URL | Description |
@@ -102,17 +57,6 @@ python3 -m http.server 8080
 | Home | `/` | Hero, timeline, projects, contact |
 | Impossible List | `/impossiblelist.html` | Living goals tracker |
 | CV | `/CV` | Trilingual online CV |
-
----
-
-## 🔐 Featured Projects (Showcased on Site)
-
-| Project | Description |
-|---------|-------------|
-| **Attack Simulation Lab** | pfSense + Suricata + Wazuh SIEM — real-world SOC setup |
-| **Snort IDS/IPS** | Network intrusion detection & prevention with custom rules |
-| **Portfolio Website** | This site — static multilingual portfolio |
-| **Web CV** | Trilingual CV built with Hugo |
 
 ---
 
