@@ -1,10 +1,11 @@
 <div align="center">
 
-#  **Mohamed Reda Qiyaoui — Portfolio Website** 🌌
+#  Portfolio Website
 
-<img width="1883" height="879" alt="image" src="https://github.com/user-attachments/assets/9ff6dc15-e20a-49dd-bf13-1891cb4038c6" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/39b6ec1e-0dd2-44de-a990-cad418f9dc88" />
 
-**Personal cybersecurity portfolio with a dark constellation aesthetic**
+
+**Personal portfolio with a dark constellation aesthetic**
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-mohamedreda.is--a.dev-blue?style=flat&logo=vercel)](https://mohamedreda.is-a.dev)
 [![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20FR%20%7C%20ES-blueviolet?style=flat)](https://mohamedreda.is-a.dev)
