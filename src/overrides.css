@@ -147,8 +147,8 @@ footer li {
   border-radius: 4px;
 }
 .header-lang-switcher .lang-dropdown {
-  left: 0;
-  right: auto;
+  left: auto;
+  right: 0;
 }
 
 .lang-option {
