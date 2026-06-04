@@ -230,14 +230,10 @@ function setLanguage(lang) {
   // Update the lang attribute on <html>
   document.documentElement.lang = lang;
 
-  // Update the switcher button display (desktop & mobile)
+  // Update the switcher button display
   const codeEl = document.getElementById("lang-code");
-  const codeElMobile = document.getElementById("lang-code-mobile");
   if (codeEl && langMeta[lang]) {
     codeEl.textContent = langMeta[lang].code;
-  }
-  if (codeElMobile && langMeta[lang]) {
-    codeElMobile.textContent = langMeta[lang].code;
   }
 
   // Save preference
@@ -245,16 +241,12 @@ function setLanguage(lang) {
 
   // Close dropdowns
   const dropdown = document.getElementById("lang-dropdown");
-  const dropdownMobile = document.getElementById("lang-dropdown-mobile");
   if (dropdown) dropdown.classList.remove("open");
-  if (dropdownMobile) dropdownMobile.style.display = "none";
 }
 
 function initLanguageSwitcher() {
   const btn = document.getElementById("lang-btn");
   const dropdown = document.getElementById("lang-dropdown");
-  const btnMobile = document.getElementById("lang-btn-mobile");
-  const dropdownMobile = document.getElementById("lang-dropdown-mobile");
 
   if (btn && dropdown) {
     btn.addEventListener("click", (e) => {
@@ -263,18 +255,7 @@ function initLanguageSwitcher() {
     });
   }
 
-  if (btnMobile && dropdownMobile) {
-    btnMobile.addEventListener("click", (e) => {
-      e.stopPropagation();
-      if (dropdownMobile.style.display === "none" || !dropdownMobile.style.display) {
-        dropdownMobile.style.display = "block";
-      } else {
-        dropdownMobile.style.display = "none";
-      }
-    });
-  }
-
-  // Language option buttons (both desktop and mobile options use .lang-option class)
+  // Language option buttons
   document.querySelectorAll(".lang-option").forEach((option) => {
     option.addEventListener("click", (e) => {
       e.stopPropagation();
@@ -286,7 +267,6 @@ function initLanguageSwitcher() {
   // Close dropdowns when clicking outside
   document.addEventListener("click", () => {
     if (dropdown) dropdown.classList.remove("open");
-    if (dropdownMobile) dropdownMobile.style.display = "none";
   });
 
   // Load saved language or default to English
