@@ -33,7 +33,7 @@ body > header > nav .button--big {
 
 /* Drawer overlay also pure black */
 #navbar-drawer {
-  background: #000000 !important;
+  background: #1e1e1e !important;
   color: #ffffff !important;
 }
 
