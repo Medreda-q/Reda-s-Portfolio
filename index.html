@@ -36,6 +36,17 @@
     </div>
   </div>
   <div class="nav-right">
+    <div class="lang-switcher desktop-lang-switcher" style="position: relative; margin-right: 8px;">
+      <button class="lang-btn" id="lang-btn-desktop" aria-label="Switch language" style="display: flex; align-items: center; gap: 5px; background: transparent; border: none; color: #e5e5e5; padding: 6px 10px; border-radius: 4px; cursor: pointer; font-size: 0.8125rem;">
+        <span id="lang-code-desktop">EN</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" fill="currentColor"><path d="M0 0l5 6 5-6z"/></svg>
+      </button>
+      <div class="lang-dropdown" id="lang-dropdown-desktop" style="display: none; position: absolute; top: calc(100% + 6px); right: 0; background: #2a2a2a; border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 6px; overflow: hidden; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4); z-index: 1200; min-width: 140px;">
+        <button class="lang-option" data-lang="en">English</button>
+        <button class="lang-option" data-lang="fr">Français</button>
+        <button class="lang-option" data-lang="es">Español</button>
+      </div>
+    </div>
     <a class="button--big" href="#top" data-i18n="nav.home">Home</a>
     <a class="button--big" href="./impossiblelist.html" data-i18n="nav.impossibleList">Impossible List</a>
     <a class="button--big" href="/CV" data-i18n="nav.cv">CV</a>

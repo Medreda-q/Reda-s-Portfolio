@@ -151,6 +151,13 @@ footer li {
   right: 0;
 }
 
+/* On desktop, hide the one next to the name */
+@media (min-width: 600px) {
+  .header-lang-switcher {
+    display: none !important;
+  }
+}
+
 .lang-option {
   display: block;
   width: 100%;

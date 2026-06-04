@@ -232,8 +232,12 @@ function setLanguage(lang) {
 
   // Update the switcher button display
   const codeEl = document.getElementById("lang-code");
+  const codeElDesktop = document.getElementById("lang-code-desktop");
   if (codeEl && langMeta[lang]) {
     codeEl.textContent = langMeta[lang].code;
+  }
+  if (codeElDesktop && langMeta[lang]) {
+    codeElDesktop.textContent = langMeta[lang].code;
   }
 
   // Save preference
@@ -241,17 +245,34 @@ function setLanguage(lang) {
 
   // Close dropdowns
   const dropdown = document.getElementById("lang-dropdown");
+  const dropdownDesktop = document.getElementById("lang-dropdown-desktop");
   if (dropdown) dropdown.classList.remove("open");
+  if (dropdownDesktop) dropdownDesktop.style.display = "none";
 }
 
 function initLanguageSwitcher() {
   const btn = document.getElementById("lang-btn");
   const dropdown = document.getElementById("lang-dropdown");
+  const btnDesktop = document.getElementById("lang-btn-desktop");
+  const dropdownDesktop = document.getElementById("lang-dropdown-desktop");
 
   if (btn && dropdown) {
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       dropdown.classList.toggle("open");
+      if (dropdownDesktop) dropdownDesktop.style.display = "none";
+    });
+  }
+
+  if (btnDesktop && dropdownDesktop) {
+    btnDesktop.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (dropdown) dropdown.classList.remove("open");
+      if (dropdownDesktop.style.display === "none" || !dropdownDesktop.style.display) {
+        dropdownDesktop.style.display = "block";
+      } else {
+        dropdownDesktop.style.display = "none";
+      }
     });
   }
 
@@ -267,6 +288,7 @@ function initLanguageSwitcher() {
   // Close dropdowns when clicking outside
   document.addEventListener("click", () => {
     if (dropdown) dropdown.classList.remove("open");
+    if (dropdownDesktop) dropdownDesktop.style.display = "none";
   });
 
   // Load saved language or default to English
