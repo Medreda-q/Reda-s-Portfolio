@@ -230,49 +230,64 @@ function setLanguage(lang) {
   // Update the lang attribute on <html>
   document.documentElement.lang = lang;
 
-  // Update the switcher button display
-  const flagEl = document.getElementById("lang-flag");
+  // Update the switcher button display (desktop & mobile)
   const codeEl = document.getElementById("lang-code");
-  if (flagEl && langMeta[lang]) {
-    flagEl.textContent = langMeta[lang].flag;
-  }
+  const codeElMobile = document.getElementById("lang-code-mobile");
   if (codeEl && langMeta[lang]) {
     codeEl.textContent = langMeta[lang].code;
+  }
+  if (codeElMobile && langMeta[lang]) {
+    codeElMobile.textContent = langMeta[lang].code;
   }
 
   // Save preference
   localStorage.setItem("preferred-lang", lang);
 
-  // Close dropdown
+  // Close dropdowns
   const dropdown = document.getElementById("lang-dropdown");
+  const dropdownMobile = document.getElementById("lang-dropdown-mobile");
   if (dropdown) dropdown.classList.remove("open");
+  if (dropdownMobile) dropdownMobile.style.display = "none";
 }
 
 function initLanguageSwitcher() {
   const btn = document.getElementById("lang-btn");
   const dropdown = document.getElementById("lang-dropdown");
+  const btnMobile = document.getElementById("lang-btn-mobile");
+  const dropdownMobile = document.getElementById("lang-dropdown-mobile");
 
   if (btn && dropdown) {
-    // Toggle dropdown
     btn.addEventListener("click", (e) => {
       e.stopPropagation();
       dropdown.classList.toggle("open");
     });
+  }
 
-    // Language option buttons
-    document.querySelectorAll(".lang-option").forEach((option) => {
-      option.addEventListener("click", (e) => {
-        e.stopPropagation();
-        const lang = option.getAttribute("data-lang");
-        setLanguage(lang);
-      });
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener("click", () => {
-      dropdown.classList.remove("open");
+  if (btnMobile && dropdownMobile) {
+    btnMobile.addEventListener("click", (e) => {
+      e.stopPropagation();
+      if (dropdownMobile.style.display === "none" || !dropdownMobile.style.display) {
+        dropdownMobile.style.display = "block";
+      } else {
+        dropdownMobile.style.display = "none";
+      }
     });
   }
+
+  // Language option buttons (both desktop and mobile options use .lang-option class)
+  document.querySelectorAll(".lang-option").forEach((option) => {
+    option.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const lang = option.getAttribute("data-lang");
+      setLanguage(lang);
+    });
+  });
+
+  // Close dropdowns when clicking outside
+  document.addEventListener("click", () => {
+    if (dropdown) dropdown.classList.remove("open");
+    if (dropdownMobile) dropdownMobile.style.display = "none";
+  });
 
   // Load saved language or default to English
   const saved = localStorage.getItem("preferred-lang") || "en";
