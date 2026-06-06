@@ -211,15 +211,57 @@ footer li {
   }
 }
 
-/* === QR Code Mobile Centering === */
-@media (max-width: 599px) {
-  .footer-qr {
-    align-items: center !important;
-    width: 100%;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
+/* === Footer Layout (Responsive QR + Contact + Sitemap) === */
+.footer-sections {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  column-gap: 2rem !important;
+  row-gap: 1.5rem !important;
+}
+
+.footer-contact {
+  flex: 0 0 100% !important;
+}
+
+.footer-qr {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  justify-content: flex-start !important;
+  width: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.footer-qr img {
+  width: 170px !important;
+  height: 170px !important;
+  display: block !important;
+  margin: 0 !important;
+}
+
+.footer-sitemap {
+  flex: 1 1 auto !important;
+  min-width: 120px !important;
+}
+
+@media (min-width: 600px) {
+  .footer-sections {
+    flex-wrap: nowrap !important;
+    gap: 3rem !important;
   }
-  .footer-qr img {
-    margin-top: 0 !important;
+  
+  .footer-contact {
+    flex: 0 1 auto !important;
+  }
+  
+  .footer-qr {
+    align-self: center !important;
+  }
+  
+  .footer-sitemap {
+    flex: 0 1 auto !important;
+    margin-left: auto !important;
   }
 }
