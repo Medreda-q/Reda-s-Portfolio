@@ -210,3 +210,13 @@ footer li {
     height: 90px !important;
   }
 }
+
+/* === QR Code Mobile Centering === */
+@media (max-width: 599px) {
+  .footer-qr {
+    align-items: center !important;
+    width: 100%;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+}
