@@ -274,6 +274,7 @@ footer li {
   
   .footer-sitemap {
     flex: 0 1 auto !important;
-    margin-left: 0 !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
