@@ -219,6 +219,10 @@ footer li {
   row-gap: 1.5rem !important;
 }
 
+.footer-left-group {
+  display: contents !important;
+}
+
 .footer-contact {
   flex: 0 0 100% !important;
 }
@@ -252,8 +256,15 @@ footer li {
     gap: 3rem !important;
   }
   
+  .footer-left-group {
+    display: flex !important;
+    flex: 0 0 calc(50% - 1.5rem) !important;
+    gap: 3rem !important;
+    align-items: flex-start !important;
+  }
+  
   .footer-contact {
-    flex: 0 1 auto !important;
+    flex: 1 1 auto !important;
   }
   
   .footer-qr {
@@ -261,7 +272,7 @@ footer li {
   }
   
   .footer-sitemap {
-    flex: 0 1 auto !important;
-    margin-left: auto !important;
+    flex: 0 0 calc(50% - 1.5rem) !important;
+    margin-left: 0 !important;
   }
 }
