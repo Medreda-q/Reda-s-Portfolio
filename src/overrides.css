@@ -212,6 +212,8 @@ footer li {
 }
 
 /* === Footer Layout (Responsive QR + Contact + Sitemap) === */
+
+/* ── Mobile-first (phone) layout ── */
 .footer-sections {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -219,14 +221,19 @@ footer li {
   row-gap: 1.5rem !important;
 }
 
+/* Dissolve the group wrapper on mobile so children join the flex flow directly */
 .footer-left-group {
   display: contents !important;
 }
 
+/* Contact section: full width on mobile */
 .footer-contact {
   flex: 0 0 100% !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
 }
 
+/* QR code: fixed size, sits in the bottom-left slot */
 .footer-qr {
   flex: 0 0 auto !important;
   display: flex !important;
@@ -245,36 +252,48 @@ footer li {
   margin: 0 !important;
 }
 
+/* Sitemap: fills the remaining space beside the QR, never wraps below it */
 .footer-sitemap {
-  flex: 1 1 auto !important;
-  min-width: 120px !important;
+  flex: 1 1 0 !important;
+  min-width: 100px !important;
+  max-width: none !important;
   margin-left: 0 !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
 }
 
+/* ── Desktop (≥ 600px) layout ── */
 @media (min-width: 600px) {
   .footer-sections {
     flex-wrap: nowrap !important;
     gap: 3rem !important;
   }
-  
+
+  /* Re-enable the left group as a flex container */
   .footer-left-group {
     display: flex !important;
     flex: 0 0 calc(50% - 1.5rem) !important;
     gap: 3rem !important;
     align-items: flex-start !important;
   }
-  
+
   .footer-contact {
     flex: 1 1 auto !important;
+    overflow-wrap: unset !important;
+    word-break: unset !important;
   }
-  
+
   .footer-qr {
     align-self: center !important;
   }
-  
+
+  /* Sitemap: centered in the right half */
   .footer-sitemap {
     flex: 0 1 auto !important;
+    min-width: unset !important;
     margin-left: auto !important;
     margin-right: auto !important;
+    overflow-wrap: unset !important;
+    word-break: unset !important;
   }
 }
