@@ -14,3 +14,4 @@ Disallow: /CV
 Disallow: /cv.html
 Disallow: /impossiblelist.html
 Disallow: /impossiblelist
+Sitemap: https://mohamedreda.is-a.dev/sitemap.xml
