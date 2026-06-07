@@ -327,6 +327,7 @@ const script = document.createElement("script");
 script.src =
   "https://cdn.jsdelivr.net/npm/tsparticles-preset-links@2.12.0/tsparticles.preset.links.bundle.min.js";
 script.onload = setupParticlesBackground;
+script.onerror = () => console.warn("tsParticles failed to load — particles disabled.");
 document.body.appendChild(script);
 
 // ===========================
