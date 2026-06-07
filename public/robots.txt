@@ -1,6 +1,8 @@
 # Group 1: Rules for Googlebot
 User-agent: Googlebot
 Disallow: /cv
+Disallow: /CV
+Disallow: /cv.html
 Disallow: /impossiblelist.html
 Disallow: /impossiblelist
 Allow: /
@@ -8,5 +10,7 @@ Allow: /
 # Group 2: Rules for all other crawlers and scrapers
 User-agent: *
 Disallow: /cv
+Disallow: /CV
+Disallow: /cv.html
 Disallow: /impossiblelist.html
 Disallow: /impossiblelist
