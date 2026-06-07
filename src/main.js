@@ -223,7 +223,7 @@ function setLanguage(lang) {
   }
 
   // Save preference
-  localStorage.setItem("preferred-lang", lang);
+  try { localStorage.setItem("preferred-lang", lang); } catch {}
 
   // Close dropdowns
   const dropdown = document.getElementById("lang-dropdown");
@@ -274,7 +274,7 @@ function initLanguageSwitcher() {
   });
 
   // Load saved language or default to English
-  const saved = localStorage.getItem("preferred-lang") || "en";
+  const saved = (() => { try { return localStorage.getItem("preferred-lang"); } catch { return null; } })() || "en";
   setLanguage(saved);
 }
 
