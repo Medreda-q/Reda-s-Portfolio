@@ -15,7 +15,7 @@ const translations = {
     "portfolio.viewRepo": "VIEW REPOSITORY",
     "project.snort": "Network Intrusion Detection and Prevention lab showcasing rule configuration, packet analysis, and real-time alerts.",
     "project.portfolioTitle": "Portfolio Website",
-    "project.portfolio": "This portfolio built with a futuristic aesthetic, responsive design, and multi-language support (EN/FR/ES).",
+    "project.portfolio": "This portfolio was built with a futuristic aesthetic, responsive design, and multi-language support (EN/FR/ES).",
     "project.cvTitle": "Web CV",
     "project.cv": "Trilingual (EN/FR/ES) online CV built with Hugo, featuring a clean design showcasing my personal info, skills and projects.",
     "project.wazuhTitle": "Attack Simulation",
