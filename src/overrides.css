@@ -295,6 +295,11 @@ footer li {
     margin-right: auto !important;
     overflow-wrap: unset !important;
     word-break: unset !important;
-    transform: translateX(-120px) !important;
+  }
+
+  @media (min-width: 1024px) {
+    .footer-sitemap {
+      transform: translateX(-120px) !important;
+    }
   }
 }
