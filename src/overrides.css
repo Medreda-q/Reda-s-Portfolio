@@ -295,6 +295,6 @@ footer li {
     margin-right: auto !important;
     overflow-wrap: unset !important;
     word-break: unset !important;
-    transform: translateX(-160px) !important;
+    transform: translateX(-120px) !important;
   }
 }
