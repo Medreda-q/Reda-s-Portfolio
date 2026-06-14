@@ -30,7 +30,7 @@ The design follows a **dark constellation aesthetic**: deep dark backgrounds, st
 
 -  **Multilingual** — Full support for English, French, and Spanish with a language switcher
 -  **Timeline section** — Academic and professional journey narrated chronologically
--  **Projects showcase** — SOC deployment, Snort IDS/IPS, Web CV, and more
+-  **Projects showcase** — DoTask (AI Task Manager), Snort IDS/IPS, Web CV, and more
 -  **Impossible List** — A living page of personal and professional goals
 -  **CV page** — Trilingual online CV (separate repo: [reda-s-CV](https://github.com/Medreda-q/reda-s-CV))
 -  **Responsive** — Mobile-friendly layout
