@@ -68,12 +68,22 @@ body > header > nav .button--big {
 }
 
 /* === Footer Links === */
+footer {
+  padding-top: 3rem !important;
+  padding-bottom: 2rem !important;
+}
+
 footer a {
   color: #00acff !important;
 }
 
 footer li {
   word-break: break-all;
+  margin-bottom: 0.75rem;
+}
+
+footer h2 {
+  margin-bottom: 1.2rem !important;
 }
 
 
@@ -218,7 +228,7 @@ footer li {
   display: flex !important;
   flex-wrap: wrap !important;
   column-gap: 2rem !important;
-  row-gap: 1.5rem !important;
+  row-gap: 2.5rem !important;
 }
 
 /* Dissolve the group wrapper on mobile so children join the flex flow directly */
@@ -266,14 +276,14 @@ footer li {
 @media (min-width: 600px) {
   .footer-sections {
     flex-wrap: nowrap !important;
-    gap: 3rem !important;
+    gap: 4rem !important;
   }
 
   /* Re-enable the left group as a flex container */
   .footer-left-group {
     display: flex !important;
     flex: 0 0 calc(50% - 1.5rem) !important;
-    gap: 3rem !important;
+    gap: 4rem !important;
     align-items: flex-start !important;
   }
 
