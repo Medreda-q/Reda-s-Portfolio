@@ -1,9 +1,4 @@
 {
-  "build": {
-    "env": {
-      "HUGO_VERSION": "0.164.0"
-    }
-  },
   "rewrites": [
     { "source": "/CV", "destination": "/cv/index.html" },
     { "source": "/cv", "destination": "/cv/index.html" }

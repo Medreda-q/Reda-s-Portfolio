@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "hugo -s cv-project -d ../public/cv --gc --minify || npx hugo-extended -s cv-project -d ../public/cv --gc --minify && vite build",
+    "build": "bash build.sh",
     "preview": "vite preview"
   },
   "devDependencies": {
