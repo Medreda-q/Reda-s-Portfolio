@@ -9,10 +9,11 @@ curl -fsSL "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/
 
 echo ">>> Hugo version: $(hugo version)"
 
-echo ">>> Building Hugo CV..."
-hugo -s cv-project -d ../public/cv --gc --minify
-
 echo ">>> Building Vite portfolio..."
 npx vite build
 
-echo ">>> Build complete!"
+echo ">>> Building Hugo CV into dist/cv/..."
+hugo -s cv-project -d ../dist/cv --gc --minify
+
+echo ">>> Build complete! Contents of dist/cv:"
+ls dist/cv/ 2>/dev/null || echo "(dist/cv not found)"
