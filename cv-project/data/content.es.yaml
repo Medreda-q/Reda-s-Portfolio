@@ -151,7 +151,7 @@ sections:
 
     - name: CV en Línea
       date: "2026 - Presente"
-      link: "https://github.com/Medreda-q/reda-s-CV"
+      link: "https://github.com/Medreda-q/Reda-s-Portfolio"
       techstack:
         icon: "fa-solid fa-file-lines"
         name: "Hugo / YAML"
