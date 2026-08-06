@@ -1,0 +1,28 @@
+section-header:
+  about: À propos
+  contact: Contact
+  skills: Compétences
+  open-source: Compétitions
+  miscellaneous: Divers
+  education: Formation
+  certifications: Certifications
+  work: Expérience Professionnelle
+  projects: Projets
+  extra-curriculars: Activités Parascolaires
+projects:
+  category:
+    cybersecurity: "Cybersécurité"
+    development: "Développement"
+  footer-message: "... et de nombreux autres petits projets"
+  download-btn: "Télécharger / Voir"
+  view-repo-btn: "VOIR LE DÉPÔT"
+certifications:
+  credential-id: "ID de la carte:"
+  skills: "Compétences:"
+  pdf-btn: "PDF"
+  verify-btn: "VÉRIFIER"
+toolbar:
+  portfolio: "Portfolio"
+  toggle-theme: "Changer le thème"
+  language: "Langue"
+  source-code: "Code source"

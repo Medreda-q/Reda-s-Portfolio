@@ -1,0 +1,36 @@
+<div class="cv-certifications">
+  <h2>
+    <i class="fa-solid fa-certificate"></i>
+    {{ i18n "section-header.certifications" }}
+  </h2>
+  {{ range . }}
+    <div class="cv-cert-item">
+      <div class="cv-cert-name">{{ .name | markdownify }}</div>
+      <div class="cv-cert-meta">
+        {{ if .date }}<span><i class="fa-solid fa-calendar-days"></i> {{ .date }}</span>{{ end }}
+        <span><i class="fa-solid fa-building"></i> {{ .issuer }}</span>
+      </div>
+      {{ if .description }}<div class="cv-cert-description">{{ .description | markdownify }}</div>{{ end }}
+      {{ if or .credential_id .skills }}
+      <div class="cv-cert-details">
+        {{ if .credential_id }}<p><strong>{{ i18n "certifications.credential-id" | default "Credential ID:" }}</strong> {{ .credential_id }}</p>{{ end }}
+        {{ if .skills }}<p><strong>{{ i18n "certifications.skills" | default "Skills:" }}</strong> {{ .skills }}</p>{{ end }}
+      </div>
+      {{ end }}
+      <div class="cv-cert-actions">
+        {{ if .link }}
+          <a class="cv-download-btn" href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-file-pdf"></i>
+            {{ i18n "certifications.pdf-btn" | default "PDF" }}
+          </a>
+        {{ end }}
+        {{ if .verify_link }}
+          <a class="cv-repo-btn" href="{{ .verify_link }}" target="_blank" rel="noopener noreferrer">
+            <i class="fa-solid fa-check-circle"></i>
+            {{ i18n "certifications.verify-btn" | default "VERIFY" }}
+          </a>
+        {{ end }}
+      </div>
+    </div>
+  {{ end }}
+</div>

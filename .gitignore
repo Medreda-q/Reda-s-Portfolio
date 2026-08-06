@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Hugo and CV build outputs
+public/cv
+cv-project/resources
+cv-project/.hugo_build.lock

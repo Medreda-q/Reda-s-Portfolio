@@ -1,0 +1,28 @@
+section-header:
+  about: About
+  contact: Contact
+  skills: Skills
+  open-source: Competitions
+  miscellaneous: Misc
+  education: Education
+  certifications: Certifications
+  work: Professional Experience
+  projects: Projects
+  extra-curriculars: Extra Curriculars
+projects:
+  category:
+    cybersecurity: "Cybersecurity"
+    development: "Development"
+  footer-message: "... and many other small projects"
+  download-btn: "Download / View"
+  view-repo-btn: "VIEW REPOSITORY"
+certifications:
+  credential-id: "Credential ID:"
+  skills: "Skills:"
+  pdf-btn: "PDF"
+  verify-btn: "VERIFY"
+toolbar:
+  portfolio: "Portfolio"
+  toggle-theme: "Toggle theme"
+  language: "Language"
+  source-code: "Source code"

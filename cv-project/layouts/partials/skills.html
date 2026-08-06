@@ -1,0 +1,34 @@
+<div class="cv-skills">
+  <h2 class="cv-sidebar-heading">{{ i18n "section-header.skills" }}</h2>
+  {{ range . }}
+    {{ if not (in (slice "languages" "langues" "idiomas") (lower .title)) }}
+      <div class="cv-skills-section">
+        <h3 class="cv-skills-section-title">{{ .title }}</h3>
+        {{ range .entry }}
+          <div class="cv-skills-entry">
+            <p class="cv-skills-entry--name">{{ .name }}</p>
+            <span class="cv-skills-entry--rating">
+              {{ with .rating }}
+                {{ $rating := . }}
+                {{ range $i := (seq 1 5) }}
+                  {{ if (le $i $rating) }}
+                    <i
+                      class="fa-solid fa-circle cv-skills-entry--rating-circle__active"
+                    ></i>
+                  {{ else }}
+                    <i
+                      class="fa-solid fa-circle cv-skills-entry--rating-circle__inactive"
+                    ></i>
+                  {{ end }}
+                {{ end }}
+              {{ end }}
+              {{ with .value }}
+                {{ . }}
+              {{ end }}
+            </span>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>

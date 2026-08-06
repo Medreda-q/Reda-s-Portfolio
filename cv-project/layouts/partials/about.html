@@ -1,0 +1,6 @@
+{{ with . }}
+<div class="cv-about">
+  <h2 class="cv-sidebar-heading">{{ i18n "section-header.about" }}</h2>
+  <p>{{ . | markdownify }}</p>
+</div>
+{{ end }}

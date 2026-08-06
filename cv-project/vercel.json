@@ -1,0 +1,22 @@
+{
+  "github": {
+    "silent": true
+  },
+  "build": {
+    "env": {
+      "HUGO_VERSION": "0.161.1"
+    }
+  },
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Content-Security-Policy",
+          "value": "frame-ancestors 'self' https://mohamedreda.is-a.dev https://reda-s-portfolio.vercel.app"
+        }
+      ]
+    }
+  ]
+}
+

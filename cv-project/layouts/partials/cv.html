@@ -1,0 +1,67 @@
+<div class="cv">
+  {{ partial "header.html" . }}
+  <div class="cv-body">
+    {{ with .sidebar }}
+      {{ partial "sidebar.html" . }}
+    {{ end }}
+    <div class="cv-sections">
+      {{ with .sections }}
+        {{ partial "education.html" .education }}
+        {{ with .certifications }}{{ partial "certifications.html" . }}{{ end }}
+        {{ with .jobs }}{{ partial "jobs.html" . }}{{ end }}
+        {{ partial "projects.html" .projects }}
+      {{ end }}
+    </div>
+
+    <!-- Mobile-only bottom sections -->
+    <div class="desktop-hide mobile-bottom-sections">
+      {{ with .sidebar }}
+        <!-- Render Languages -->
+        {{ range .skills }}
+          {{ if in (slice "languages" "langues" "idiomas") (lower .title) }}
+            <div class="cv-skills-section">
+              <h2 class="cv-sidebar-heading">
+                <i class="fa-solid fa-language" style="margin-right: 0.4em;"></i>
+                {{ .title }}
+              </h2>
+              {{ range .entry }}
+                <div class="cv-skills-entry" style="margin-bottom: 0.5em;">
+                  <p class="cv-skills-entry--name" style="margin: 0;">{{ .name }}</p>
+                  <span class="cv-skills-entry--rating" style="font-weight: bold; color: var(--accentColor);">
+                    {{ .value }}
+                  </span>
+                </div>
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+        
+        <!-- Render Open Source -->
+        {{ with .opensource }}
+          <div class="cv-opensource-mobile" style="margin-top: 1.5em;">
+            <h2 class="cv-sidebar-heading">
+              <i class="fa-solid fa-trophy" style="margin-right: 0.4em;"></i>
+              {{ i18n "section-header.open-source" }}
+            </h2>
+            {{ with .title }}<p style="margin-bottom: 0.5em; font-weight: bold; color: var(--accentColor);">{{ . }}</p>{{ end }}
+            <ul style="padding-left: 1.2em; margin-top: 0.5em;">
+              {{ range .contributions }}
+                <li class="cv-opensource-contribution" style="margin-bottom: 0.5em;">
+                  {{ if .link }}
+                    <a href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+                      {{ .name }}
+                      <i class="fa-solid fa-link" style="font-size: 0.8em; margin-left: 0.2em;"></i>
+                    </a>
+                    ({{ .description }})
+                  {{ else }}
+                    {{ .name }}
+                  {{ end }}
+                </li>
+              {{ end }}
+            </ul>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</div>

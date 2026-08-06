@@ -1,0 +1,12 @@
+# Group 1: Rules for Googlebot
+User-agent: Googlebot
+Disallow: /cv
+Disallow: /impossiblelist.html
+Disallow: /impossiblelist
+Allow: /
+
+# Group 2: Rules for all other crawlers and scrapers
+User-agent: *
+Disallow: /cv
+Disallow: /impossiblelist.html
+Disallow: /impossiblelist

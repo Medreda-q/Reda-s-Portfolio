@@ -1,0 +1,19 @@
+<div class="cv-languages mobile-hide">
+  {{ range . }}
+    {{ if in (slice "languages" "langues" "idiomas") (lower .title) }}
+      <h2 class="cv-sidebar-heading">
+        {{ .title }}
+      </h2>
+      <div class="cv-languages-body" style="margin-top: 0.5em;">
+        {{ range .entry }}
+          <div class="cv-skills-entry" style="margin-bottom: 0.5em;">
+            <p class="cv-skills-entry--name" style="margin: 0;">{{ .name }}</p>
+            <span class="cv-skills-entry--rating" style="font-weight: bold; color: var(--accentColor);">
+              {{ .value }}
+            </span>
+          </div>
+        {{ end }}
+      </div>
+    {{ end }}
+  {{ end }}
+</div>

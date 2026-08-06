@@ -1,0 +1,311 @@
+<script>
+  function toggleDarkMode() {
+    const classes = document.querySelector("html").classList;
+    if (classes.contains("dark")) {
+      classes.remove("dark");
+      try {
+        localStorage.setItem("theme", "light");
+      } catch (e) {}
+    } else {
+      classes.add("dark");
+      try {
+        localStorage.setItem("theme", "dark");
+      } catch (e) {}
+    }
+  }
+
+  function toggleLanguageDropdown() {
+    document.getElementById("lang-dropdown").classList.toggle("show");
+  }
+
+  window.onclick = function(event) {
+    if (!event.target.matches('.lang-dropbtn') && !event.target.closest('.lang-dropbtn')) {
+      var dropdowns = document.getElementsByClassName("lang-dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+    const modal = document.getElementById("download-modal");
+    if (modal && event.target === modal) {
+      modal.style.display = "none";
+    }
+  }
+
+  let savedTheme = null;
+  try {
+    savedTheme = localStorage.getItem("theme");
+  } catch (e) {
+    console.warn("localStorage is unavailable or restricted in this environment:", e);
+  }
+  const htmlClasses = document.querySelector("html").classList;
+
+  if (savedTheme === "dark") {
+    htmlClasses.add("dark");
+  } else if (savedTheme === "light") {
+    htmlClasses.remove("dark");
+  } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    htmlClasses.add("dark");
+  }
+  try {
+    var savedLang = localStorage.getItem("lang");
+    var currentPath = window.location.pathname.replace(/\/+$/, "") || "/";
+    // Detect the current language from the URL path
+    var pathLang = "en"; // default
+    if (currentPath.startsWith("/fr")) pathLang = "fr";
+    else if (currentPath.startsWith("/es")) pathLang = "es";
+
+    if (currentPath === "/") {
+      // If landing on the generic root, redirect to saved language if different
+      if (savedLang && savedLang !== "en") {
+        window.location.replace("/" + savedLang + "/");
+      }
+    } else {
+      // If landing on a language-specific path, update saved language
+      localStorage.setItem("lang", pathLang);
+    }
+  } catch(e) {}
+</script>
+
+<!-- Download Modal -->
+<div id="download-modal" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+">
+  <div style="
+    background: var(--bodyBgColor);
+    color: var(--bodyTextColor);
+    border: 1px solid var(--accentColor);
+    border-radius: 8px;
+    padding: 2em;
+    max-width: 320px;
+    width: 90%;
+    text-align: center;
+  ">
+    <h3 style="margin: 0 0 0.3em 0; color: var(--accentColor); text-transform: uppercase;">
+      <i class="fa-solid fa-file-pdf"></i> Download CV
+    </h3>
+    <p style="margin: 0 0 1.5em 0; font-size: 0.9em; opacity: 0.8;">Choose language and theme</p>
+
+    <!-- Language Selection -->
+    <p style="margin: 0 0 0.5em 0; font-size: 0.8em; text-transform: uppercase; font-weight: bold; opacity: 0.6; text-align: left;">Language</p>
+    <div style="display: flex; gap: 0.6em; justify-content: center; margin-bottom: 1.5em;">
+      <button onclick="setModalLang('EN')" id="modal-lang-EN" style="
+        flex: 1;
+        padding: 0.5em;
+        border: 1px solid var(--accentColor);
+        border-radius: 4px;
+        background: none;
+        color: var(--accentColor);
+        font-weight: bold;
+        font-size: 0.85em;
+        cursor: pointer;
+      ">🇬🇧 EN</button>
+      <button onclick="setModalLang('FR')" id="modal-lang-FR" style="
+        flex: 1;
+        padding: 0.5em;
+        border: 1px solid var(--accentColor);
+        border-radius: 4px;
+        background: none;
+        color: var(--accentColor);
+        font-weight: bold;
+        font-size: 0.85em;
+        cursor: pointer;
+      ">🇫🇷 FR</button>
+      <button onclick="setModalLang('ES')" id="modal-lang-ES" style="
+        flex: 1;
+        padding: 0.5em;
+        border: 1px solid var(--accentColor);
+        border-radius: 4px;
+        background: none;
+        color: var(--accentColor);
+        font-weight: bold;
+        font-size: 0.85em;
+        cursor: pointer;
+      ">🇪🇸 ES</button>
+    </div>
+
+    <!-- Theme Selection -->
+    <p style="margin: 0 0 0.5em 0; font-size: 0.8em; text-transform: uppercase; font-weight: bold; opacity: 0.6; text-align: left;">Theme</p>
+    <div style="display: flex; gap: 0.6em; justify-content: center; margin-bottom: 1.5em;">
+      <button onclick="setModalTheme('Light')" id="modal-theme-Light" style="
+        flex: 1;
+        padding: 0.5em;
+        border: 1px solid var(--accentColor);
+        border-radius: 4px;
+        background: none;
+        color: var(--accentColor);
+        font-weight: bold;
+        font-size: 0.85em;
+        cursor: pointer;
+      "><i class="fa-solid fa-sun"></i> Light</button>
+      <button onclick="setModalTheme('Dark')" id="modal-theme-Dark" style="
+        flex: 1;
+        padding: 0.5em;
+        border: 1px solid var(--accentColor);
+        border-radius: 4px;
+        background: none;
+        color: var(--accentColor);
+        font-weight: bold;
+        font-size: 0.85em;
+        cursor: pointer;
+      "><i class="fa-solid fa-moon"></i> Dark</button>
+    </div>
+
+    <!-- Download Button -->
+    <a id="modal-download-btn" href="#" download style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5em;
+      padding: 0.7em;
+      background: var(--accentColor);
+      color: var(--bodyBgColor);
+      border-radius: 4px;
+      font-weight: bold;
+      font-size: 0.9em;
+      text-decoration: none;
+      margin-bottom: 0.8em;
+    ">
+      <i class="fa-solid fa-download"></i> Download
+    </a>
+
+    <button onclick="document.getElementById('download-modal').style.display='none'" style="
+      font-size: 0.8em;
+      opacity: 0.6;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: var(--bodyTextColor);
+    ">Cancel</button>
+  </div>
+</div>
+
+<div class="toolbar">
+  <a href="/" class="toolbar-brand" target="_self">
+    <i class="fa-solid fa-house-chimney"></i>
+    {{ i18n "toolbar.portfolio" }}
+  </a>
+
+  <div class="toolbar-spacer" style="flex-grow: 1;"></div>
+
+  <div class="toolbar-actions">
+    <button class="theme-toggle" onclick="toggleDarkMode()">
+      <span class="hide-dark">
+        <i class="fa-solid fa-sun"></i>
+      </span>
+      <span class="hide-light">
+        <i class="fa-solid fa-moon"></i>
+      </span>
+      {{ i18n "toolbar.toggle-theme" }}
+    </button>
+
+    <span class="toolbar-separator">|</span>
+
+    <div class="lang-dropdown-container">
+      <button onclick="toggleLanguageDropdown()" class="lang-dropbtn">
+        <i class="fa-solid fa-language"></i> {{ i18n "toolbar.language" }}
+      </button>
+      <div id="lang-dropdown" class="lang-dropdown-content">
+        {{ range $.Site.Home.AllTranslations }}
+          {{ if ne $.Site.Language.Lang .Language.Lang }}
+            <a href="{{ .Permalink }}" target="_self">
+              {{ .Language.Label }}
+            </a>
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+
+    <span class="toolbar-separator">|</span>
+
+    <button class="print-button" id="cv-print-btn" onclick="window.print()">
+      <i class="fa-solid fa-print"></i> {{ i18n "toolbar.print" }}
+    </button>
+
+  </div>
+</div>
+
+<script>
+  const isIosSafari = /iP(hone|od|ad)/.test(navigator.userAgent) &&
+                    /Safari/.test(navigator.userAgent) &&
+                    !/Chrome/.test(navigator.userAgent) &&
+                    !/CriOS/.test(navigator.userAgent);
+
+  // Default selections
+  const currentLang = "{{ .Site.Language.Lang }}";
+  const langMap = { en: "EN", fr: "FR", es: "ES" };
+  let modalLang = langMap[currentLang] || "EN";
+  let modalTheme = document.querySelector("html").classList.contains("dark") ? "Dark" : "Light";
+
+  function updateModalDownloadBtn() {
+    const btn = document.getElementById("modal-download-btn");
+    btn.href = `/assets/cv/CV_${modalLang}_${modalTheme}.pdf`;
+
+    // Highlight selected language
+    ["EN", "FR", "ES"].forEach(l => {
+      const el = document.getElementById(`modal-lang-${l}`);
+      el.style.background = l === modalLang ? "var(--accentColor)" : "none";
+      el.style.color = l === modalLang ? "var(--bodyBgColor)" : "var(--accentColor)";
+    });
+
+    // Highlight selected theme
+    ["Light", "Dark"].forEach(t => {
+      const el = document.getElementById(`modal-theme-${t}`);
+      el.style.background = t === modalTheme ? "var(--accentColor)" : "none";
+      el.style.color = t === modalTheme ? "var(--bodyBgColor)" : "var(--accentColor)";
+    });
+  }
+
+  function setModalLang(lang) {
+    modalLang = lang;
+    updateModalDownloadBtn();
+  }
+
+  function setModalTheme(theme) {
+    modalTheme = theme;
+    updateModalDownloadBtn();
+  }
+
+  function openDownloadModal() {
+    // Reset to current page lang and current theme on open
+    modalLang = langMap[currentLang] || "EN";
+    modalTheme = document.querySelector("html").classList.contains("dark") ? "Dark" : "Light";
+    updateModalDownloadBtn();
+    document.getElementById("download-modal").style.display = "flex";
+  }
+
+  if (isIosSafari) {
+    const btn = document.getElementById("cv-print-btn");
+    const link = document.createElement("a");
+    link.className = "print-button";
+    link.href = "#";
+    link.innerHTML = `<i class="fa-solid fa-file-pdf"></i> {{ i18n "toolbar.print" }}`;
+    link.onclick = function(e) {
+      e.preventDefault();
+      openDownloadModal();
+    };
+    btn.replaceWith(link);
+  }
+</script>
+<script>
+  document.querySelectorAll(".lang-dropdown-content a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      try {
+        // Extract language code from the href (e.g., "/fr/" -> "fr", "/" -> "en")
+        var href = this.getAttribute("href");
+        var langMatch = href.match(/\/(en|fr|es)\/?/);
+        var lang = langMatch ? langMatch[1] : "en";
+        localStorage.setItem("lang", lang);
+      } catch(e) {}
+    });
+  });
+</script>

@@ -1,0 +1,50 @@
+<div class="cv-projects">
+  <h2>
+    <i class="fa-solid fa-paintbrush"></i>
+    {{ i18n "section-header.projects" }}
+  </h2>
+  {{ range . }}
+    <div class="cv-projects-item">
+      <div class="cv-projects-item-header">
+        <div class="cv-projects-item--name">
+          {{ .name | markdownify }}
+        </div>
+      </div>
+      <div class="cv-projects-item-description">
+        {{ .description | markdownify }}
+      </div>
+      {{ if .skills }}
+        <div class="cv-projects-item-skills">
+          <i class="fa-solid fa-tags"></i> {{ .skills }}
+        </div>
+      {{ end }}
+      {{ if .links }}
+        <div class="cv-projects-item-actions">
+          {{ range .links }}
+            <a class="cv-download-btn" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+              <i class="{{ .icon }}"></i>
+              {{ .label }}
+            </a>
+          {{ end }}
+        </div>
+      {{ else if .link }}
+        <div class="cv-projects-item-actions">
+          {{ if strings.Contains .link "github.com" }}
+            <a class="cv-repo-btn" href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-github"></i>
+              {{ i18n "projects.view-repo-btn" | default "VIEW REPOSITORY" }}
+            </a>
+          {{ else }}
+            <a class="cv-download-btn" href="{{ .link }}" target="_blank" rel="noopener noreferrer">
+              <i class="fa-solid fa-download"></i>
+              {{ i18n "projects.download-btn" | default "Download / View" }}
+            </a>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
+  {{ end }}
+  <p>
+    <em>{{ i18n "projects.footer-message" }}</em>
+  </p>
+</div>

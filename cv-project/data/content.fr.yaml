@@ -1,0 +1,161 @@
+name: Mohamed Reda Qiyaoui
+tagline: Étudiant de 1ère année de DUT en Cybersécurité et passionné de pentesting | à la recherche d'un stage
+
+sidebar:
+  about: "Étudiant en 1ère année de DUT Cybersécurité & Audit à l'EST Tétouan. Centré sur la détection des menaces, la défense réseau et le hacking éthique. Compétiteur CTF actif. À la recherche d'un stage d'initiation en 2026."
+  contact:
+    email: mohamedreda.labwork@gmail.com
+    whatsapp: "+212 723489469"
+    phone: "+212 628622254"
+    location: "Al'Amine, Fnideq-Mdiq, Morocco"
+    github: Medreda-q
+    linkedin: mohamed-reda-qiyaoui
+  skills:
+    - title: Cybersécurité
+      entry:
+        - name: Sécurité Réseau
+          rating: 5
+        - name: Tests d'Intrusion
+          rating: 4
+    - title: Programmation
+      entry:
+        - name: Python
+          rating: 5
+        - name: C
+          rating: 5
+    - title: Outils & Systèmes
+      entry:
+        - name: Linux / Kali Linux
+          rating: 5
+        - name: Git / GitHub
+          rating: 3
+        - name: Virtualisation
+          rating: 4
+    - title: Langues
+      entry:
+        - name: Arabe
+          value: Natif
+        - name: Anglais
+          value: Avancé
+        - name: Français
+          value: Avancé
+  opensource:
+    title: ""
+    contributions:
+      - name: "ENSI 2K26 CTF (Cyberspace x ENSI) — 11 Flags résolus (Mai 2026)"
+      - name: "NorthSec 2026 — 6 Flags résolus (Avril 2026)"
+      - name: "Morocco-Spain Cybersecurity Forum AI CTF 2026 — 5 Flags résolus (Équipe ANARCHOTECH) (Mai 2026)"
+  misc: []
+
+sections:
+  education:
+    - name: "Baccalauréat en Sciences Physiques"
+      location: "Option française, Mention Très Bien"
+      date: "2024/2025"
+    - name: "DUT en Cybersécurité et Audit des Systèmes d'Information"
+      location: "[École Supérieure de Technologie de Tétouan (ESTT)](https://est.uae.ma/)"
+      date: "Octobre 2025 – Présent"
+      description: "Sécurité Réseau · Cryptographie Appliquée · Administration Windows Server · IDS/IPS · Programmation Python & C · Sécurité des Bases de Données · TCP/IP & OSI · Architecture Informatique"
+  certifications:
+    - name: "Getting Started with Cisco Packet Tracer"
+      issuer: "Cisco Networking Academy"
+      credential_id: "d4d416ad-0662-42a4-844a-ba06a100ea49"
+      link: "/assets/certificats/Cisco_Packet_Tracer.pdf"
+      skills: "Sécurité des Réseaux · TCP/IP · Analyse de Paquets · Topologie Réseau · Configuration de Périphériques"
+      description: "Apprentissage de la simulation et de la configuration de topologies réseau avec Cisco Packet Tracer. Couverture des concepts fondamentaux du réseau : routage, commutation et configuration des équipements. Développement de compétences pratiques dans la visualisation et le dépannage d'infrastructures réseau."
+    - name: "Introduction to Cybersecurity"
+      issuer: "Cisco Networking Academy"
+      credential_id: "5ec54f80-adb5-4d42-9ad8-3cdc94648e6e"
+      link: "/assets/certificats/Introduction_to_Cybersecurity.pdf"
+      verify_link: "https://www.credly.com/badges/32c48def-a804-4207-a372-1865c99e364b/linked_in_profile"
+      skills: "Principes de Sécurité · Vecteurs d'Attaque · Sensibilisation aux Malwares · Protection des Données"
+      description: "Acquisition des bases en cybersécurité : menaces, vecteurs d'attaque et stratégies de défense. Exploration des sujets incluant les malwares, l'ingénierie sociale, les vulnérabilités réseau et la protection des données. Sensibilisation à la manière dont les organisations protègent leurs actifs numériques et répondent aux incidents."
+    - name: "NDG Linux Unhatched"
+      issuer: "Cisco Networking Academy"
+      credential_id: "253dc9e7-6545-4f6e-8149-0aaff7b2cf2c"
+      link: "/assets/certificats/Linux_Unhatched.pdf"
+      verify_link: "https://www.credly.com/badges/b65cad8d-9cf8-49bd-b781-cc9083a3ca03/linked_in_profile"
+      skills: "Navigation Système · Gestion des Permissions · Gestion des Processus · Scripts Shell"
+      description: "Maîtrise des commandes Linux essentielles : navigation dans le système de fichiers, gestion des permissions et des processus. Apprentissage des commandes shell utilisées quotidiennement en cybersécurité et administration système. Construction d'une base pratique pour travailler dans des environnements Linux comme Kali et Ubuntu Server."
+  jobs: []
+  projects:
+    - name: SNORT IDS/IPS
+      date: "Avril 2026"
+      links:
+        - label: "VOIR LA PRÉSENTATION"
+          url: "/assets/Snort_Presentation.pptx"
+          icon: "fa-solid fa-file-powerpoint"
+        - label: "VOIR LE RAPPORT TP"
+          url: "/assets/Snort_TP.pdf"
+          icon: "fa-solid fa-file-lines"
+      techstack:
+        icon: "fa-solid fa-shield-halved"
+        name: "Réseaux / Sécurité"
+      skills: "IDS/IPS · Détection d'Intrusion · Détection basée sur des Règles"
+      description: |-
+        - Réalisation de 3 travaux pratiques progressifs couvrant l'installation de Snort 3, l'écriture de règles personnalisées et le déploiement d'IPS actif.
+        - Rédaction de 8 règles personnalisées ciblant les floods ICMP, les attaques par force brute SSH, les scans Nmap, Telnet et les injections SQL HTTP.
+        - Simulation de 6 scénarios d'attaques réelles et validation de la détection en temps réel via les journaux d'alertes et Wireshark.
+
+    - name: Labs CTF & Flags Cachés
+      date: "2026 - Présent"
+      link: "https://github.com/Medreda-q/CTF_Labs"
+      techstack:
+        icon: "fa-solid fa-flag"
+        name: "Cybersécurité / CTF"
+      description: |-
+        - Conception de 2 défis CTF personnalisés couvrant l'exploitation web et la rétro-ingénierie.
+        - Projet en cours avec d'autres défis en développement.
+
+    - name: Simulation d'Attaque — Wazuh, pfSense & Suricata
+      date: "Mai 2026"
+      links:
+        - label: "VOIR LA PRÉSENTATION"
+          url: "/assets/Wazuh_Presentation.pptx"
+          icon: "fa-solid fa-file-powerpoint"
+        - label: "VOIR LE RAPPORT"
+          url: "/assets/Wazuh_Rapport.pdf"
+          icon: "fa-solid fa-file-lines"
+        - label: "VOIR LES ATTAQUES"
+          url: "/assets/Wazuh_Attacks.pdf"
+          icon: "fa-solid fa-shield-virus"
+      techstack:
+        icon: "fa-solid fa-shield-virus"
+        name: "Sécurité / Simulation"
+      skills: "SIEM · NIDS · Détection des Menaces · Évaluation des Vulnérabilités"
+      description: |-
+        - Déploiement d'un SOC open-source complet intégrant le SIEM Wazuh, le NIDS Suricata et le pare-feu pfSense.
+        - Simulation de 7 catégories d'attaques (reconnaissance, force brute, SQLi, reverse shell, élévation de privilèges, empoisonnement ARP, DoS) en utilisant plus de 12 outils.
+        - Validation de la détection via les alertes de niveau 9-10 de Wazuh, les signatures Suricata et le module d'intégrité FIM.
+
+    - name: DoTask
+      date: "2026"
+      link: "https://github.com/Medreda-q/DoTask-manager"
+      techstack:
+        icon: "fa-solid fa-tasks"
+        name: "Flask / ReactJS"
+      skills: "Full-Stack · REST API · Google OAuth · JWT · TypeScript · Python · JavaScript · CSS · HTML · Dockerfile"
+      description: |-
+        - Développement d'une application web de gestion de notes/tâches (CRUD) avec un backend Flask et un frontend ReactJS.
+        - Intégration de l'authentification Google OAuth, des sessions JWT et de la réinitialisation de mot de passe par email via Resend SDK.
+        - Conception d'un tableau de bord moderne avec design glassmorphic, filtrage par tags interactif et statistiques d'état.
+
+    - name: Site Portfolio
+      date: "2026 - Présent"
+      link: "https://github.com/Medreda-q/Reda-s-Portfolio"
+      techstack:
+        icon: "fa-brands fa-html5"
+        name: "HTML/CSS/JS"
+      description: >-
+        Un site portfolio personnel construit avec une esthétique thème sombre pour présenter mes compétences en cybersécurité et mes meilleurs projets. Comprend un design responsive et des animations personnalisées.
+
+    - name: CV en Ligne
+      date: "2026 - Présent"
+      link: "https://github.com/Medreda-q/reda-s-CV"
+      techstack:
+        icon: "fa-solid fa-file-lines"
+        name: "Hugo / YAML"
+      description: >-
+        CV trilingue (EN/FR/ES) construit avec Hugo. Présente un design épuré incluant des notes de compétences, une liste de projets et des informations de contact.
+
+

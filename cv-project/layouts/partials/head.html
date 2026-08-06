@@ -1,0 +1,41 @@
+<head>
+  <title>{{ .Site.Title }}</title>
+  <link rel="icon" type="image/jpeg" href="{{ "profile.jpg" | relURL }}" />
+  <link rel="shortcut icon" type="image/jpeg" href="{{ "profile.jpg" | relURL }}" />
+  <base target="_blank" />
+  <meta charset="utf-8" />
+  {{ $data := index hugo.Data (.Param "datasource") }}
+  {{ $desc := printf "%s %s" (i18n "head.description-prefix" | default "CV of Mohamed Reda Qiyaoui —") $data.tagline }}
+  <meta name="description" content="{{ $desc }}" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="{{ .Site.Title }}" />
+  <meta property="og:description" content="{{ $desc }}" />
+  <meta property="og:image" content="{{ "profile.jpg" | absURL }}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ .Site.Title }}" />
+  <meta name="twitter:description" content="{{ $desc }}" />
+  <meta name="twitter:image" content="{{ "profile.jpg" | absURL }}" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  {{ $style := resources.Get "main.scss" | toCSS | minify | fingerprint }}
+  <link
+    rel="stylesheet"
+    href="{{ $style.RelPermalink }}"
+    integrity="{{ $style.Data.Integrity }}"
+  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>

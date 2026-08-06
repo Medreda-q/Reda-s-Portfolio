@@ -1,0 +1,27 @@
+baseURL = '/cv/'
+locale = 'en-us'
+title = 'CV | Mohamed Reda Qiyaoui'
+disableKinds = ["taxonomy", "term"]
+
+defaultContentLanguage = 'en'
+[languages]
+  [languages.en]
+    label = "English"
+    weight = 1
+    [languages.en.params]
+      datasource = 'content.en'
+  [languages.fr]
+    label = "Français"
+    weight = 2
+    [languages.fr.params]
+      datasource = 'content.fr'
+  [languages.es]
+    label = "Español"
+    weight = 3
+    [languages.es.params]
+      datasource = 'content.es'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

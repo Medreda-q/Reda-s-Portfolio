@@ -1,0 +1,29 @@
+<div class="cv-contact">
+  <h2 class="cv-sidebar-heading">{{ i18n "section-header.contact" }}</h2>
+  {{ with .email }}
+    <div class="cv-contact-item">
+      <i class="fa-solid fa-envelope"></i>
+      <a href="mailto:{{ . }}">{{ . }}</a>
+    </div>
+  {{ end }}
+  {{ with .phone }}
+    <div class="cv-contact-item">
+      <i class="fa-solid fa-phone"></i>
+      {{ . }}
+    </div>
+  {{ end }}
+  {{ with .whatsapp }}
+    <div class="cv-contact-item">
+      <i class="fa-brands fa-whatsapp"></i>
+      <a href="https://wa.me/{{ . | replaceRE `[^0-9]` `` }}">{{ . }}</a>
+    </div>
+  {{ end }}
+  {{ with .location }}
+    <div class="cv-contact-item">
+      <i class="fa-solid fa-location-dot"></i>
+      {{ . }}
+    </div>
+  {{ end }}
+  <img src="{{ "img/qr-code.png" | relURL }}" alt="Contact QR Code" class="cv-qr-code-light" />
+  <img src="{{ "img/qr-code-dark.png" | relURL }}" alt="Contact QR Code" class="cv-qr-code-dark" />
+</div>

@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "dev": "npx hugo-extended server",
+    "format": "prettier -w '**/*.{html,yaml,md,scss}'"
+  },
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "prettier-plugin-go-template": "^0.0.13"
+  }
+}
