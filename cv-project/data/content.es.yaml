@@ -140,22 +140,14 @@ sections:
         - Implementé autenticación Google OAuth, sesiones JWT y restablecimiento de contraseña por correo electrónico con Resend SDK.
         - Diseñé un panel de control glassmorphic con filtrado interactivo por etiquetas y estadísticas de estado de tareas.
 
-    - name: Sitio Web Portfolio
+    - name: Portafolio & CV en Línea
       date: "2026 - Presente"
       link: "https://github.com/Medreda-q/Reda-s-Portfolio"
       techstack:
         icon: "fa-brands fa-html5"
-        name: "HTML/CSS/JS"
+        name: "HTML/CSS/JS/Hugo"
+      skills: "HTML · CSS · JS · Hugo · Vercel · i18n · Responsive Design"
       description: >-
-        Un sitio web portfolio personal construido con una estética de tema oscuro para mostrar mis habilidades de ciberseguridad y mejores proyectos. Incluye diseño responsive y animaciones personalizadas.
-
-    - name: CV en Línea
-      date: "2026 - Presente"
-      link: "https://github.com/Medreda-q/Reda-s-Portfolio"
-      techstack:
-        icon: "fa-solid fa-file-lines"
-        name: "Hugo / YAML"
-      description: >-
-        CV trilingüe (EN/FR/ES) construido con Hugo. Presenta un diseño limpio e incluye valoraciones de habilidades, listado de proyectos e información de contacto.
+        Un sitio web portafolio personal construido con una estética de tema oscuro para mostrar mis proyectos. Incluye un CV en línea trilingüe (EN/FR/ES) integrado construido con Hugo.
 
 

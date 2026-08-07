@@ -140,22 +140,14 @@ sections:
         - Implemented Google OAuth authentication, JWT sessions, and email password reset via Resend SDK.
         - Designed a premium glassmorphic dashboard with interactive tag filtering and task status statistics.
 
-    - name: Portfolio Website
+    - name: Portfolio & Web CV
       date: "2026 - Present"
       link: "https://github.com/Medreda-q/Reda-s-Portfolio"
       techstack:
         icon: "fa-brands fa-html5"
-        name: "HTML/CSS/JS"
+        name: "HTML/CSS/JS/Hugo"
+      skills: "HTML · CSS · JS · Hugo · Vercel · i18n · Responsive Design"
       description: >-
-        A personal portfolio website built with a dark-theme aesthetic to showcase my cybersecurity skills and top projects. Features responsive design and custom animations.
-
-    - name: Web CV
-      date: "2026 - Present"
-      link: "https://github.com/Medreda-q/Reda-s-Portfolio"
-      techstack:
-        icon: "fa-solid fa-file-lines"
-        name: "Hugo / YAML"
-      description: >-
-        Trilingual (EN/FR/ES) online CV built with Hugo. Features a clean design with skills ratings, project listings, and contact information.
+        A personal portfolio website built with a dark-theme aesthetic to showcase my projects. Includes a built-in trilingual (EN/FR/ES) online CV built with Hugo.
 
 
