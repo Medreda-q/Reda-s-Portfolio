@@ -81,14 +81,6 @@ Reda-s-Portfolio/
 <img width="1279" height="720" alt="Web CV Light Theme" src="https://github.com/user-attachments/assets/9ea6a995-8d8f-4a9d-baa2-562d351b8f42" />
 <img width="1279" height="720" alt="Web CV Dark Theme" src="https://github.com/user-attachments/assets/01ba16b8-9f4d-4a97-9ea5-38529ac4f3f1" />
 
-
 ---
-
-## 📜 License
-
-This repository is **source-available** for educational purposes:
-- You are free to explore, study, and draw inspiration from the code.
-- You are **not** permitted to copy, host, redistribute, or repurpose this portfolio as-is.
-- You may **not** use my name, photography, or personal content.
 
 © 2026 Mohamed Reda Qiyaoui — All rights reserved.
