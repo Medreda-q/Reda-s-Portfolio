@@ -78,8 +78,8 @@ Reda-s-Portfolio/
 ## 📸 Screenshots
 
 ### Web CV (Light & Dark Themes)
-<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/9ea6a995-8d8f-4a9d-baa2-562d351b8f42" />
-<img width="1279" height="720" alt="image" src="https://github.com/user-attachments/assets/01ba16b8-9f4d-4a97-9ea5-38529ac4f3f1" />
+<img width="1279" height="720" alt="Web CV Light Theme" src="https://github.com/user-attachments/assets/9ea6a995-8d8f-4a9d-baa2-562d351b8f42" />
+<img width="1279" height="720" alt="Web CV Dark Theme" src="https://github.com/user-attachments/assets/01ba16b8-9f4d-4a97-9ea5-38529ac4f3f1" />
 
 
 ---
