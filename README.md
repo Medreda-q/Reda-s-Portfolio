@@ -8,7 +8,6 @@
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-mohamedreda.is--a.dev-blue?style=flat&logo=vercel)](https://mohamedreda.is-a.dev)
 [![CV](https://img.shields.io/badge/CV-mohamedreda.is--a.dev%2FCV-blue?style=flat&logo=google-docs)](https://mohamedreda.is-a.dev/CV)
-[![Hugo](https://img.shields.io/badge/CV%20Built%20with-Hugo-FF4088?style=flat&logo=hugo&logoColor=white)](https://gohugo.io)
 [![Languages](https://img.shields.io/badge/Languages-EN%20%7C%20FR%20%7C%20ES-blueviolet?style=flat)](https://mohamedreda.is-a.dev)
 
 </div>
@@ -79,8 +78,9 @@ Reda-s-Portfolio/
 ## 📸 Screenshots
 
 ### Web CV (Light & Dark Themes)
-<img width="1248" height="878" alt="mohamedreda is-a dev_CV" src="https://github.com/user-attachments/assets/113b6529-d3dd-496e-871f-c73c20cf94ec" />
-<img width="1248" height="878" alt="mohamedreda is-a dev_CV (1)" src="https://github.com/user-attachments/assets/7af898fa-e84b-4e25-a982-53c1431b555f" />
+<img width="640" height="360" alt="image" src="https://github.com/user-attachments/assets/9ea6a995-8d8f-4a9d-baa2-562d351b8f42" />
+<img width="1279" height="720" alt="image" src="https://github.com/user-attachments/assets/01ba16b8-9f4d-4a97-9ea5-38529ac4f3f1" />
+
 
 ---
 
