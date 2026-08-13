@@ -128,18 +128,6 @@ sections:
         - Simulation de 7 catégories d'attaques (reconnaissance, force brute, SQLi, reverse shell, élévation de privilèges, empoisonnement ARP, DoS) en utilisant plus de 12 outils.
         - Validation de la détection via les alertes de niveau 9-10 de Wazuh, les signatures Suricata et le module d'intégrité FIM.
 
-    - name: DoTask
-      date: "2026"
-      link: "https://github.com/Medreda-q/DoTask-manager"
-      techstack:
-        icon: "fa-solid fa-tasks"
-        name: "Flask / ReactJS"
-      skills: "Full-Stack · REST API · Google OAuth · JWT · TypeScript · Python · JavaScript · CSS · HTML · Dockerfile"
-      description: |-
-        - Développement d'une application web de gestion de notes/tâches (CRUD) avec un backend Flask et un frontend ReactJS.
-        - Intégration de l'authentification Google OAuth, des sessions JWT et de la réinitialisation de mot de passe par email via Resend SDK.
-        - Conception d'un tableau de bord moderne avec design glassmorphic, filtrage par tags interactif et statistiques d'état.
-
     - name: Portfolio & CV en Ligne
       date: "2026 - Présent"
       link: "https://github.com/Medreda-q/Reda-s-Portfolio"

@@ -30,7 +30,7 @@ This repository hosts my complete personal portfolio website and my trilingual o
 ## 🌟 Key Features
 
 - **Multilingual Mode** — Native support for English, French, and Spanish with interactive language switchers.
-- **Projects Showcase** — Highlighting major works like CyberStorm Club, DoTask (AI Task Manager), Snort IDS/IPS, and others.
+- **Projects Showcase** — Highlighting major works like CyberStorm Club, Snort IDS/IPS, and others.
 - **Impossible List** — An ever-evolving public roadmap of my technical, academic, and life goals.
 - **Responsive Layouts** — Optimized for desktops, tablets, and smartphones.
 - **Unified Build Integration** — Vercel builds the main site and compiles the Hugo CV into `dist/cv/` in one single workflow.
