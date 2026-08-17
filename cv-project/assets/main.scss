@@ -125,6 +125,20 @@ body {
   body {
     margin: 0;
   }
+  .mobile-bottom-sections {
+    background-color: var(--bodyBgColor);
+    color: var(--bodyTextColor);
+    padding: 0 2.5em 1em 2.5em;
+
+    h2 {
+      border-bottom: 1px solid;
+      text-transform: uppercase;
+      padding-bottom: 0.2em;
+      i {
+        margin-right: 0.4em;
+      }
+    }
+  }
 }
 
 .cv-sidebar {
