@@ -181,18 +181,6 @@ footer li {
   max-inline-size: max-content !important;
 }
 
-/* === Impossible List === */
-.impossible-list {
-  list-style-type: square;
-  padding-left: 20px;
-  margin-bottom: 2.5rem;
-  color: rgba(255, 255, 255, 0.85);
-}
-.impossible-list li {
-  margin-bottom: 0.8rem;
-  font-size: 1.05rem;
-  line-height: 1.5;
-}
 
 /* === Splash Responsive Fixes === */
 .splash {
@@ -297,10 +285,11 @@ footer li {
     word-break: unset !important;
   }
 
-  @media (min-width: 1024px) {
-    .footer-sitemap {
-      transform: translateX(-120px) !important;
-    }
+}
+
+@media (min-width: 1024px) {
+  .footer-sitemap {
+    transform: translateX(-120px) !important;
   }
 }
 

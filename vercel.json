@@ -3,7 +3,8 @@
   "outputDirectory": "dist",
   "rewrites": [
     { "source": "/CV", "destination": "/cv/index.html" },
-    { "source": "/cv", "destination": "/cv/index.html" }
+    { "source": "/cv", "destination": "/cv/index.html" },
+    { "source": "/cv/", "destination": "/cv/index.html" }
   ],
   "headers": [
     {
