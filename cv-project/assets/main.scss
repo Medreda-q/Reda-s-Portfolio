@@ -152,6 +152,8 @@ body {
 .cv-sidebar-heading {
   border-bottom: 1px solid;
   text-transform: uppercase;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 .cv-about {
@@ -165,6 +167,7 @@ body {
 }
 
 .cv-contact {
+  margin-bottom: 1.5em;
   a {
     color: inherit;
     font-weight: inherit;

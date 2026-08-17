@@ -24,6 +24,8 @@
       {{ . }}
     </div>
   {{ end }}
-  <img src="{{ "img/qr-code.png" | relURL }}" alt="Contact QR Code" class="cv-qr-code-light" />
-  <img src="{{ "img/qr-code-dark.png" | relURL }}" alt="Contact QR Code" class="cv-qr-code-dark" />
+  <div class="cv-qr-wrapper">
+    <img src="{{ "img/qr-code.png" | relURL }}" alt="Contact QR Code" class="cv-qr-code-light" />
+    <img src="{{ "img/qr-code-dark.png" | relURL }}" alt="Contact QR Code" class="cv-qr-code-dark" />
+  </div>
 </div>
