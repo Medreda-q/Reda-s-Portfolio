@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:cv": "npx hugo-extended server -s cv-project -b http://localhost:1313/cv/",
+    "build:cv": "npx hugo-extended -s cv-project -d ../public/cv",
     "build": "bash build.sh",
     "preview": "vite preview"
   },

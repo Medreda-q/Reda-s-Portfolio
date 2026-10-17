@@ -79,6 +79,19 @@ sections:
       description: "Adquisición de habilidades esenciales en línea de comandos Linux: navegación del sistema de archivos, permisos y gestión de procesos. Aprendizaje de comandos shell utilizados diariamente en ciberseguridad y administración de sistemas. Construcción de una base práctica para trabajar en entornos Linux como Kali y Ubuntu Server."
   jobs: []
   projects:
+    - name: NetScan — NIDS y Detección de Anomalías con Machine Learning
+      date: "Julio 2026"
+      link: "https://github.com/Medreda-q/NetScan"
+      techstack:
+        icon: "fa-solid fa-brain"
+        name: "Machine Learning / NIDS"
+      skills: "Machine Learning no supervisado · Isolation Forest · NIDS · Análisis Forense PCAP · Escaneos Furtivos Nmap · SYN Flood / DDoS · Scapy · Streamlit · Threat Intelligence"
+      description: |-
+        - Diseño de un NIDS con aprendizaje no supervisado combinando inspección microscópica de paquetes y análisis de comportamiento macroscópico en ventanas deslizantes de 5 segundos mediante Isolation Forest.
+        - Eliminación del punto ciego de las firmas estáticas, interceptando escaneos sigilosos de reconocimiento (Nmap TCP SYN `-sS`) y ataques de denegación de servicio (SYN Flood / DDoS) sin reglas predefinidas.
+        - Implementación de doble interfaz: orquestador CLI para Kali Linux y panel de control SOC interactivo trilingüe (Streamlit & Plotly) con enriquecimiento Cyber Threat Intelligence (GeoIP) y generación automática de reglas de cortafuegos (`iptables` / `netsh`).
+        - Validación experimental en banco de pruebas LAN físico aislado (Kali Linux vs Metasploitable 2) con generador automatizado de informes forenses de incidentes (HTML5/PDF).
+
     - name: SNORT IDS/IPS
       date: "Abril 2026"
       links:

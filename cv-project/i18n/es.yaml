@@ -26,3 +26,5 @@ toolbar:
   toggle-theme: "Cambiar tema"
   language: "Idioma"
   source-code: "Código fuente"
+  download: "Descargar CV"
+  print: "Imprimir"
